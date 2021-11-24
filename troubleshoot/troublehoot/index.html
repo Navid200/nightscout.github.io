@@ -1036,6 +1036,19 @@
     Heroku Settings
   </a>
   
+    <nav class="md-nav" aria-label="Heroku Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    Authentication errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1125,6 +1138,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#basal-iob-cob-missing-after-dst" class="md-nav__link">
+    Basal / IOB / COB missing after DST
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1161,6 +1181,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dexcom_bridge/" class="md-nav__link">
+        Dexcom bridge
+      </a>
     </li>
   
 
@@ -1403,6 +1437,19 @@
     Heroku Settings
   </a>
   
+    <nav class="md-nav" aria-label="Heroku Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    Authentication errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1488,6 +1535,13 @@
           <li class="md-nav__item">
   <a href="#data-in-the-future" class="md-nav__link">
     Data in the future
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basal-iob-cob-missing-after-dst" class="md-nav__link">
+    Basal / IOB / COB missing after DST
   </a>
   
 </li>
@@ -1605,7 +1659,6 @@
 <p>If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to use another Nightscout site name in Heroku as the current one is already in use. First <a href="../../troubleshoot/connection_string/#recover-your-connection-string">recover your connection string</a>, and proceed to <a href="../../nightscout/new_user/">creating a new Nightscout</a> <strong>skipping Step 3</strong>.</p>
 <p></br></p>
 <h1 id="atlas">Atlas<a class="headerlink" href="#atlas" title="Permanent link">⌁</a></h1>
-<p></br></p>
 <h3 id="limit-of-one-free-cluster">Limit of one free cluster.<a class="headerlink" href="#limit-of-one-free-cluster" title="Permanent link">⌁</a></h3>
 <p></br></p>
 <p>When creating a new site or migrating (usually not the first attempt), when reaching <code>Target Cluster</code>.</p>
@@ -1645,7 +1698,6 @@
 </ul>
 <p></br></p>
 <h1 id="nightscout-page-doesnt-open">Nightscout page doesn't open<a class="headerlink" href="#nightscout-page-doesnt-open" title="Permanent link">⌁</a></h1>
-<p></br></p>
 <h3 id="application-error">Application Error<a class="headerlink" href="#application-error" title="Permanent link">⌁</a></h3>
 <p></br></p>
 <p><img src="../img/TShoot05.png" style="zoom:80%;" ></p>
@@ -1691,7 +1743,6 @@
 <p><img src="../img/TShoot43.png" style="zoom:80%;" ></p>
 <p></br></p>
 <h1 id="no-data-in-nightscout">No data in Nightscout<a class="headerlink" href="#no-data-in-nightscout" title="Permanent link">⌁</a></h1>
-<p></br></p>
 <p>Make sure your Nightscout <a href="../../nightscout/profile_editor/">time zone</a> is correct.</p>
 <p></br></p>
 <h3 id="dexcom-data-not-showing">Dexcom data not showing<a class="headerlink" href="#dexcom-data-not-showing" title="Permanent link">⌁</a></h3>
@@ -1716,12 +1767,13 @@
 </ol>
 <p><img src="../../nightscout/img/bridge-settings.jpg" width="600"></p>
 <p></br></p>
-<p>One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout BRIDGE settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. </p>
+<h5 id="authentication-errors">Authentication errors<a class="headerlink" href="#authentication-errors" title="Permanent link">⌁</a></h5>
+<p>One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout <code>BRIDGE</code> settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. </p>
 <p><img src="../../nightscout/img/heroku-logs.png"></p>
 <p></br></p>
-<p>Do your logs have "SSO authentication errors" like in the red box highlighted above? If you do, then:</p>
+<p>Do your logs have "<code>SSO authentication errors</code>" like in the red box highlighted above? If you do, then:</p>
 <ol>
-<li>Delete your BRIDGE entries within Heroku settings.  Don't delete the variables, just delete the values of BRIDGE_PASSWORD and BRIDGE_USER_NAME.</li>
+<li>Delete your <code>BRIDGE</code> entries within Heroku settings.  Don't delete the variables, just delete the values of <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code>.</li>
 <li>Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.</li>
 </ol>
 <p>When you change these variables, Heroku restarts Nightscout. So now everything should work.</p>
@@ -1772,7 +1824,7 @@
 <p></br></p>
 <div class="admonition warning">
 <p class="admonition-title">UpTime Robot</p>
-<p>Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (Dexcom) or Heroku addresses ban. This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.</p>
+<p>Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (<a href="../dexcom_bridge/#account-lock">Dexcom</a>) or Heroku addresses ban. This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.</p>
 </div>
 <p></br></p>
 <h3 id="error-code-instead-of-a-bg-value">Error code instead of a BG value<a class="headerlink" href="#error-code-instead-of-a-bg-value" title="Permanent link">⌁</a></h3>
@@ -1822,16 +1874,13 @@
 </table>
 <p></br></p>
 <h1 id="data-timing-issues">Data timing issues<a class="headerlink" href="#data-timing-issues" title="Permanent link">⌁</a></h1>
-<p></br></p>
 <h3 id="basal-is-shifted-in-time">Basal is shifted in time<a class="headerlink" href="#basal-is-shifted-in-time" title="Permanent link">⌁</a></h3>
-<p></br></p>
 <ul>
 <li>Check the time zone is correct for your currently active profile in your Nightscout <a href="../../nightscout/profile_editor/"><code>Profile editor</code></a>.</li>
 </ul>
 <p><img src="../img/TShoot30.png" style="zoom:75%;" ></p>
 <p></br></p>
 <h3 id="data-in-the-future">Data in the future<a class="headerlink" href="#data-in-the-future" title="Permanent link">⌁</a></h3>
-<p></br></p>
 <ul>
 <li>Check you don't have data in the future with the <code>Admin tools</code>. Remove them if existing.</li>
 </ul>
@@ -1852,6 +1901,11 @@
 <li>Delete the entries in the future (manually) with the bin icon</li>
 </ul>
 <p><img src="../img/TShoot34.png" style="zoom:80%;" ></p>
+<p></br></p>
+<h3 id="basal-iob-cob-missing-after-dst">Basal / IOB / COB missing after DST<a class="headerlink" href="#basal-iob-cob-missing-after-dst" title="Permanent link">⌁</a></h3>
+<ul>
+<li>Setup again your time zone in <a href="../../nightscout/profile_editor/">profile editor</a> (authenticate and save).</li>
+</ul>
 <p></br></p>
 <h1 id="database-full">Database full<a class="headerlink" href="#database-full" title="Permanent link">⌁</a></h1>
 <p></br></p>
@@ -1942,13 +1996,13 @@
       
       
         
-        <a href="../connection_string/" class="md-footer__link md-footer__link--next" aria-label="Next: Connection failure" rel="next">
+        <a href="../dexcom_bridge/" class="md-footer__link md-footer__link--next" aria-label="Next: Dexcom bridge" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Connection failure
+              Dexcom bridge
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -1736,6 +1736,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../troubleshoot/dexcom_bridge/" class="md-nav__link">
+        Dexcom bridge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../troubleshoot/connection_string/" class="md-nav__link">
         Connection failure
       </a>
@@ -2672,7 +2686,7 @@
 <p>See <a href="../../nightscout/new_user#editing-config-vars-in-heroku">here</a> where and how to change your variables.</p>
 <hr />
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /></p>
-<p>You can change your settings in the Control Panel see <a href="../../../vendors/T1Pal/control_panel">here</a> for available variables and plugins.</p>
+<p>You can change your settings in the Control Panel see <a href="../../../vendors/T1Pal/new_user/#configure-more-settings">here</a> for available variables and plugins.</p>
 <hr />
 <p></br></p>
 <h2 id="nightscout-config-vars">Nightscout Config Vars<a class="headerlink" href="#nightscout-config-vars" title="Permanent link">⌁</a></h2>
@@ -3003,10 +3017,15 @@
 </ul>
 <p></br></p>
 <h5 id="ar2-ar2-forecasting"><code>ar2</code> (AR2 Forecasting)<a class="headerlink" href="#ar2-ar2-forecasting" title="Permanent link">⌁</a></h5>
-<p>Generates alarms based on forecasted values. See <a href="https://github.com/nightscout/nightscout.github.io/wiki/Forecasting">Forecasting using AR2 algorithm</a></p>
+<p>Generates alarms based on forecasted values.</p>
 <ul>
 <li>Enabled by default if no thresholds are set <strong>OR</strong> <code>ALARM_TYPES</code> includes <code>predict</code>.</li>
-<li><code>AR2</code> forecasting display can be enabled/disabled from <code>...</code></li>
+<li>
+<p>You can permanently disable AR2 setting the <code>SHOW_FORECAST</code> variable to <code>false</code> (or removing <code>ar2</code> if you use it for <code>openaps</code> or <code>loop</code>).</p>
+</li>
+<li>
+<p><code>AR2</code> forecasting display can be enabled/disabled from <code>...</code></p>
+</li>
 <li>Use extended settings to adjust AR2 behavior:</li>
 <li><code>AR2_CONE_FACTOR</code> (<code>2</code>) - to adjust size of cone, use <code>0</code> for a single line.</li>
 </ul>

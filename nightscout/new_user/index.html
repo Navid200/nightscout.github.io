@@ -980,6 +980,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../troubleshoot/dexcom_bridge/" class="md-nav__link">
+        Dexcom bridge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../troubleshoot/connection_string/" class="md-nav__link">
         Connection failure
       </a>
@@ -1290,58 +1304,60 @@ You’ll find people that are willing to help you setting it up in many Facebook
 </div>
 <p><img src="../img/NewNS19b.png" style="zoom:70%;" /></p>
 <p></br></p>
-<p>d) Leave all default values and click <code>Create Cluster</code></p>
+<p>d) Check you selected <code>Shared</code>, leave all default values and click <code>Create Cluster</code></p>
 <p><img src="../img/NewNS20.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>Atlas will create your default cluster, wait until it is complete... (can take more than 3 minutes)</p>
-<p><img src="../img/NewNS21.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>e) Click on <code>CONNECT</code></p>
-<p><img src="../img/NewNS22.png" style="zoom:100%;" /></p>
-<p></br></p>
-<p>f) Click on <code>Allow Access from Anywhere</code></p>
-<div class="admonition warning">
-<p class="admonition-title">If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.</p>
-</div>
-<p><img src="../img/NewNS23.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>g) Click on <code>Add IP Address</code></p>
-<p><img src="../img/NewNS24.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>h) Add a database username (for example <code>nightscout</code>) and a database password (in the example below <code>soo5ecret</code> but please change it!).</p>
+<p>e) Select <code>Username and Password</code> and invent a database username (for example <code>nightscout</code>) and a database password (for example <code>soo5ecret</code> but please make one that's yours!).</p>
 <div class="admonition warning">
 <p class="admonition-title">Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers. No spaces.</p>
 </div>
 <p><img src="../img/NewNS25.png" style="zoom:80%;" /></p>
-<p>Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.</p>
-<p>Database password: <input type="text" id="myPwd" value="click here, delete and put your own" size="30"></p>
-<p>Database username: <input type="text" id="myUsr" value="click here, delete and put your own" size="30"></p>
+<p>Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.</p>
+<p>Database password (write here -&gt;) <input type="text" id="myPwd" value="click here, delete and put your own" size="30"></p>
+<p>Database username (write here -&gt;) <input type="text" id="myUsr" value="click here, delete and put your own" size="30"></p>
 <p></br></p>
-<p>i) Then click <code>Create Database User</code>.</p>
-<p><img src="../img/NewNS25b.png" style="zoom:80%;" /></p>
+<p>Then click <code>Create User</code>.</p>
+<p>f) Select <code>My Local Environment</code> and in the box <code>My IP address</code> write <code>0.0.0.0/0</code> (mind these are all zeroes, not the letter O)</p>
+<div class="admonition warning">
+<p class="admonition-title">If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.</p>
+</div>
+<p><img src="../img/NewNS23.png" style="zoom:80%;" /></p>
+<p>Then click <code>Add Entry</code>.</p>
 <p></br></p>
-<p>j) Click on <code>Choose a connection method</code></p>
+<p>g) Click on <code>Finish and Close</code></p>
+<p><img src="../img/NewNS24.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>h) Click on <code>Go to Databases</code></p>
+<p><img src="../img/NewNS24b.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>i) Atlas will create your default cluster, it can take more than 3 minutes</p>
+<p><img src="../img/NewNS21.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>j) Click on <code>CONNECT</code></p>
+<p><img src="../img/NewNS22.png" style="zoom:100%;" /></p>
+<p></br></p>
+<p>k) Click on <code>Choose a connection method</code></p>
 <p><img src="../img/NewNS26.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>k) Select <code>Connect your application</code></p>
+<p>l) Select <code>Connect your application</code></p>
 <p><img src="../img/NewNS27.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>l) Copy the connection string: click <code>Copy</code> and paste it somewhere to edit it (like Notepad).</p>
+<p>m) Copy the connection string: click <code>Copy</code> and paste it somewhere to edit it (like Notepad).</p>
 <p><img src="../img/NewNS28.png" style="zoom:100%;" /></p>
 <p></br></p>
-<p>m) Paste the string in the box below (yes, in this browser window you're reading now, unless you're reading a printed version).</p>
-<p><input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100"></p>
+<p>n) Paste the string in the line below (yes, in this browser window you're reading now, unless you're reading a printed version).</p>
+<p>(paste here -&gt;) <input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100"></p>
 <p></br></p>
 <div class="admonition info">
 <p class="admonition-title">It should be similar to this (<code>xxxxx</code> will be different):</p>
 <p><code>mongodb+srv://nightscout:&lt;password&gt;@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority</code></p>
 </div>
 <p></br></p>
-<p>n) Invent a name for your database, this is not a critical information (for example <code>mycgmic</code>), note that default is <code>myFirstDatabase</code>. Only letters and numbers, no spaces.</p>
-<p>Database Name: <input type="text" id="mydB" value="click here, delete and put your own" size="30"></p>
+<p>o) Invent a name for your database, this is not a critical information (for example <code>mycgmic</code>), note that default is <code>myFirstDatabase</code>. Only letters and numbers, no spaces.</p>
+<p>Database Name (write here -&gt;) <input type="text" id="mydB" value="click here, delete and put your own" size="30"></p>
 <p></br></p>
-<p>o) Click the <code>Generate</code> button (just here below this line: in this browser window you're reading):</p>
-<p><button onclick="Generate()">Generate</button></p>
+<p>p) Click on the word <code>Generate</code> (just here below this line: in this browser window you're reading):</p>
+<p><button onclick="Generate()">-&gt; Generate</button></p>
 <p style="font-size:25px" id="result">The connection string will appear here</p>
 
 <script>
@@ -1440,7 +1456,7 @@ function Generate()
 <p></br></p>
 <div class="admonition info">
 <p class="admonition-title">MOST COMMON ERRORS</p>
-<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The <code>BRIDGE_USER_NAME</code> is usually not your email address but recently newly created accounts do not have a user name. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See <a href="../../troubleshoot/dexcom_bridge/">here</a> for troubleshooting tips and information on your Dexcom account.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Password</p>

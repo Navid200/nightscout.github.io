@@ -913,6 +913,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../troubleshoot/dexcom_bridge/" class="md-nav__link">
+        Dexcom bridge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../troubleshoot/connection_string/" class="md-nav__link">
         Connection failure
       </a>
@@ -1029,63 +1043,104 @@
 </div>
 <p></br></p>
 <h2 id="step-1-create-an-atlas-account">Step 1: Create an Atlas account<a class="headerlink" href="#step-1-create-an-atlas-account" title="Permanent link">⌁</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MongoDB Atlas regularly changes the site aspect. If you encounter a page not matching this documentation search for keywords like <code>not now</code>, <code>skip</code> or <code>later</code> to continue. Report discrepancies <a href="https://github.com/nightscout/nightscout.github.io/issues/new">here</a>.</p>
+</div>
 <p></br></p>
 <ul>
-<li>Click here: <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a> and click <code>Start Free</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS17.png" style="zoom:70%;" /></p>
-<p></br></p>
-<ul>
-<li>Enter information then click <code>Get Started Free</code></li>
+<li>
+<p>Open another tab at: <a href="https://www.mongodb.com/cloud/atlas/register">https://www.mongodb.com/cloud/atlas/register</a></p>
+</li>
+<li>
+<p>Enter your information, click <code>Continue</code> then <code>Create account</code></p>
+</li>
 </ul>
 <p><img src="../../nightscout/img/NewNS18.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>MongoDB Atlas will send you an email, if you don't receive it check your Spam folder.</li>
+</ul>
+<p><img src="../../nightscout/img/NewNS18b.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>In the email you received from <strong>MongoDB Atlas</strong> (mongodb-atlas @ mongodb.com), click on <code>Verify email</code></li>
+</ul>
+<p><img src="../../nightscout/img/NewNS18c.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Another browser tab will open with your confirmed MongoDB account, <code>Continue</code>.</li>
+</ul>
+<p><img src="../../nightscout/img/NewNS18d.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Enter some information (like below) and click <code>Finish</code>.</li>
+</ul>
+<p><img src="../../nightscout/img/NewNS18e.png" style="zoom:80%;" /></p>
 <p></br></p>
 <ul>
 <li>Select <code>Create a cluster in Shared Clusters (FREE)</code></li>
 </ul>
 <p><img src="../../nightscout/img/NewNS19.png" style="zoom:80%;" /></p>
+<div class="admonition note">
+<p class="admonition-title">If you ever see this, just STOP</p>
+<p>We're building a free cluster: you don't need to provide any billing information.</p>
+</div>
+<p><img src="../../nightscout/img/NewNS19b.png" style="zoom:70%;" /></p>
 <p></br></p>
 <ul>
-<li>Leave all default values and click <code>Create Cluster</code></li>
+<li>Check you selected <code>Shared</code>, leave all default values and click <code>Create Cluster</code></li>
 </ul>
 <p><img src="../../nightscout/img/NewNS20.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)</p>
+<ul>
+<li>Select <code>Username and Password</code> and invent a database username (for example <code>nightscout</code>) and a database password (for example <code>soo5ecret</code> but please make one that's yours!).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers. No spaces.</p>
+</div>
+<p><img src="../../nightscout/img/NewNS25.png" style="zoom:80%;" /></p>
+<ul>
+<li>Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.</li>
+</ul>
+<p>Database password (write here -&gt;) <input type="text" id="myPwd" value="click here, delete and put your own" size="30"></p>
+<p>Database username (write here -&gt;) <input type="text" id="myUsr" value="click here, delete and put your own" size="30"></p>
+<p></br></p>
+<ul>
+<li>
+<p>Then click <code>Create User</code>.</p>
+</li>
+<li>
+<p>Select <code>My Local Environment</code> and in the box <code>My IP address</code> write <code>0.0.0.0/0</code> (mind these are all zeroes, not the letter O)</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.</p>
+</div>
+<p><img src="../../nightscout/img/NewNS23.png" style="zoom:80%;" /></p>
+<ul>
+<li>Then click <code>Add Entry</code>.</li>
+</ul>
+<p></br></p>
+<ul>
+<li>Click on <code>Finish and Close</code></li>
+</ul>
+<p><img src="../../nightscout/img/NewNS24.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Go to Databases</code></li>
+</ul>
+<p><img src="../../nightscout/img/NewNS24b.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Atlas will create your default cluster, it can take more than 3 minutes</li>
+</ul>
 <p><img src="../../nightscout/img/NewNS21.png" style="zoom:80%;" /></p>
 <p></br></p>
 <ul>
 <li>Click on <code>CONNECT</code></li>
 </ul>
 <p><img src="../../nightscout/img/NewNS22.png" style="zoom:100%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>Allow Access from Anywhere</code></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.</p>
-</div>
-<p><img src="../../nightscout/img/NewNS23.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Click on <code>Add IP Address</code></li>
-</ul>
-<p><img src="../../nightscout/img/NewNS24.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>Add a database username (for example <code>nightscout</code>) and a database password (in the example below <code>soo5ecret</code>).</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Database credentials</p>
-<p>Do not use your Atlas account credentials. Do not use special characters: only letters and numbers.</p>
-</div>
-<p>Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.</p>
-<p>Database password: <input type="text" id="myPwd" value="soo5ecret" size="20"></p>
-<p>Database username: <input type="text" id="myUsr" value="nightscout" size="20"></p>
-<p></br></p>
-<ul>
-<li>Then click <code>Create Database User</code>.</li>
-</ul>
-<p><img src="../../nightscout/img/NewNS25.png" style="zoom:80%;" /></p>
 <p></br></p>
 <ul>
 <li>Click on <code>Choose a connection method</code></li>
@@ -1098,14 +1153,14 @@
 <p><img src="../../nightscout/img/NewNS27.png" style="zoom:80%;" /></p>
 <p></br></p>
 <ul>
-<li>Copy the connection string: click <code>Copy</code>.</li>
+<li>Copy the connection string: click <code>Copy</code> and paste it somewhere to edit it (like Notepad).</li>
 </ul>
 <p><img src="../../nightscout/img/NewNS28.png" style="zoom:100%;" /></p>
 <p></br></p>
 <ul>
-<li>Paste the string in the box below.</li>
+<li>Paste the string in the line below (yes, in this browser window you're reading now, unless you're reading a printed version).</li>
 </ul>
-<p><input type="text" id="myAtlas" value="" size="100"></p>
+<p>(paste here -&gt;) <input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100"></p>
 <p></br></p>
 <div class="admonition info">
 <p class="admonition-title">It should be similar to this (<code>xxxxx</code> will be different):</p>
@@ -1113,25 +1168,23 @@
 </div>
 <p></br></p>
 <ul>
-<li>Invent a name for your database, this is not a critical information (for example <code>mycgmic</code>), note that default is <code>myFirstDatabase</code>.</li>
+<li>Invent a name for your database, this is not a critical information (for example <code>mycgmic</code>), note that default is <code>myFirstDatabase</code>. Only letters and numbers, no spaces.</li>
 </ul>
-<p>Database Name: <input type="text" id="mydB" value="mycgmic" size="20"></p>
+<p>Database Name (write here -&gt;) <input type="text" id="mydB" value="click here, delete and put your own" size="30"></p>
 <p></br></p>
 <ul>
-<li>Click the <code>Generate</code> button (just here below this line: in this browser window you're reading):</li>
+<li>Click on the word <code>Generate</code> (just here below this line: in this browser window you're reading):</li>
 </ul>
-<p><button onclick="Generate()">Generate</button></p>
+<p><button onclick="Generate()">-&gt; Generate</button></p>
 <p style="font-size:25px" id="result">The connection string will appear here</p>
 
 <script>
 var bAtlas;
 var sdB, sPwd;
 var sFinalString = "Not defined yet";
-
 function Generate()
 {
   var sString = sFinalString;
-
   bAtlas=0;
   var sString = "Looks good!";
   var sAtlas = document.getElementById("myAtlas").value;
@@ -1160,6 +1213,7 @@ function Generate()
 
   if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
   else document.getElementById("result").innerHTML = sString;
+  if(bAtlas) document.getElementById("resultbis").innerHTML = sFinalString;
 }
 </script>
 
@@ -1177,7 +1231,7 @@ function Generate()
 <p class="admonition-title">Note</p>
 <p>There are no &lt; and &gt; characters in the final string, neither for password nor for database name.</p>
 </div>
-<p></br></p>
+<p></br></br></p>
 <h2 id="step-2-add-your-connection-string-to-heroku">Step 2: Add your connection string to Heroku<a class="headerlink" href="#step-2-add-your-connection-string-to-heroku" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <p>Access your variables opening <a href="https://id.heroku.com/login">Heroku</a>.</p>

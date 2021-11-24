@@ -14,7 +14,7 @@
     
     
       
-        <title>Dexcom `bridge` troubleshooting - Nightscout</title>
+        <title>Dexcom bridge - Nightscout</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dexcom `bridge` troubleshooting
+              Dexcom bridge
             
           </span>
         </div>
@@ -237,13 +237,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../troublehoot/" class="md-tabs__link">
+      <a href="../troublehoot/" class="md-tabs__link md-tabs__link--active">
         Troubleshoot
       </a>
     </li>
@@ -811,12 +813,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -842,6 +846,83 @@
       <a href="../troublehoot/" class="md-nav__link">
         Troubleshooting
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dexcom bridge
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Dexcom bridge
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#username-and-password" class="md-nav__link">
+    Username and password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#username-is-an-email" class="md-nav__link">
+    Username is an email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-a-username" class="md-nav__link">
+    Obtaining a username
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-lock" class="md-nav__link">
+    Account lock
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -930,6 +1011,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#username-is-an-email" class="md-nav__link">
+    Username is an email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-a-username" class="md-nav__link">
+    Obtaining a username
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-lock" class="md-nav__link">
+    Account lock
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -945,14 +1047,51 @@
                 
                 <h1 id="dexcom-bridge-troubleshooting">Dexcom <code>bridge</code> troubleshooting<a class="headerlink" href="#dexcom-bridge-troubleshooting" title="Permanent link">⌁</a></h1>
 <h2 id="username-and-password">Username and password<a class="headerlink" href="#username-and-password" title="Permanent link">⌁</a></h2>
-<p></br></p>
-<p>Your Dexcom account is the one that identifies you to access all services: Store, Clarity and mobile apps. <br />
-In order to make sure you're accessing the right account, log into Clarity to check your credentials are valid.</p>
-<p>For US account: <a href="https://clarity.dexcom.com/">https://clarity.dexcom.com/</a> 
+<p>Your Dexcom account is the one that identifies you to access all services: Store, Clarity and mobile apps. In order to make sure you're accessing the right account, log into Clarity to check your credentials are valid.</p>
+<p>For US account: <a href="https://clarity.dexcom.com/">https://clarity.dexcom.com/</a> <br />
 For all others: <a href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/</a></p>
-<p>In the case you have linked accounts, check you will be using the right credentials for the profile you want to use.</p>
+<p><img src="../img/DexShare01.png" style="zoom:60%;" ></p>
+<p>In the case you have linked accounts, check you are using the right credentials for the profile you want to <code>bridge</code> to Nightscout.</p>
 <p><img src="../img/DexShare05.png" style="zoom:60%;" ></p>
-<p>Verify you actually have data in this account. <a href="https://clarity.dexcom.eu/#/data/daily">https://clarity.dexcom.eu/#/data/daily</a></p>
+<p>Also verify you actually have current data in this profile/account. <a href="https://clarity.dexcom.eu/#/data/daily">https://clarity.dexcom.eu/#/data/daily</a></p>
+<div class="admonition note">
+<p class="admonition-title">Password</p>
+<p>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Changing password</p>
+<p>Before you decide to change your password, make sure to put your Nightscout site in <a href="../cleanup/#maintenance-mode">maintenance mode</a>, <a href="../../uploader/setup/#dexcom">update <code>BRIDGE</code> variables</a> accordingly and make sure you have recent data in Clarity before exiting maintenance mode.</p>
+</div>
+<p></br></p>
+<h2 id="username-is-an-email">Username is an email<a class="headerlink" href="#username-is-an-email" title="Permanent link">⌁</a></h2>
+<p>Newly created Dexcom users do not have an username but only an email address.</p>
+<p><img src="../img/DexShare01b.png" style="zoom:60%;" ></p>
+<p>This can be an issue if you want to use <code>bridge</code> to have your data directly in Nightscout. Make sure you're using the <a href="../../update/update/">latest release</a> if you experience problems.</p>
+<p>Common symptoms are:</p>
+<ul>
+<li>no data in Nightscout even with correct credentials</li>
+<li>account locking once or more per day even with correct credentials</li>
+</ul>
+<p></br></p>
+<h2 id="obtaining-a-username">Obtaining a username<a class="headerlink" href="#obtaining-a-username" title="Permanent link">⌁</a></h2>
+<p>Dependent accounts can have a username.</p>
+<p><img src="../img/DexShare02.png" style="zoom:60%;" ></p>
+<p>You can create your Dexcom account and add dependent accounts for children, wife, ...</p>
+<p>Some dependent accounts with an email address can generate problems when trying to connect directly to Nightscout.</p>
+<p></br></p>
+<h2 id="account-lock">Account lock<a class="headerlink" href="#account-lock" title="Permanent link">⌁</a></h2>
+<p>You can check if your account is locked by trying to log into Clarity.</p>
+<p><img src="../img/DexShare00.png" style="zoom:60%;" ></p>
+<p>If you see this message, you must disable (enter an empty username for example) all devices and apps trying to get data from or push data into Dexcom share.</p>
+<p>In order to recover from an account lock, it is usually enough to wait for 10-15 minutes after you disabled all devices and apps trying to access the account with a wrong password.</p>
+<p>Do not forget any app or device!</p>
+<ul>
+<li>Nightscout</li>
+<li>Smartwatches apps</li>
+<li>Sugarmate, Happy Bob, xDrip+,...</li>
+<li>...</li>
+</ul>
+<p>You can identify an account lock browsing your Heroku logs as described <a href="../troublehoot/#authentication-errors">here</a>.</p>
                 
               
               
@@ -973,6 +1112,41 @@ For all others: <a href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/<
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../troublehoot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Troubleshooting
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../connection_string/" class="md-footer__link md-footer__link--next" aria-label="Next: Connection failure" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Connection failure
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

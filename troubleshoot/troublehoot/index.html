@@ -1061,40 +1061,6 @@
     Dexcom username issue
   </a>
   
-    <nav class="md-nav" aria-label="Dexcom username issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#change-username" class="md-nav__link">
-    Change username
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-new-account" class="md-nav__link">
-    Create new account
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reinstall-dexcom-transmitter-app" class="md-nav__link">
-    Reinstall Dexcom Transmitter app
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-dexcom-data-in-nightscout" class="md-nav__link">
-    Update Dexcom data in Nightscout
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1462,40 +1428,6 @@
     Dexcom username issue
   </a>
   
-    <nav class="md-nav" aria-label="Dexcom username issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#change-username" class="md-nav__link">
-    Change username
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-new-account" class="md-nav__link">
-    Create new account
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reinstall-dexcom-transmitter-app" class="md-nav__link">
-    Reinstall Dexcom Transmitter app
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-dexcom-data-in-nightscout" class="md-nav__link">
-    Update Dexcom data in Nightscout
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1779,35 +1711,13 @@
 <p>When you change these variables, Heroku restarts Nightscout. So now everything should work.</p>
 <div class="admonition info">
 <p class="admonition-title">About your Bridge password and user name</p>
-<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom mobile app or online account. The values of them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. If you have double-checked everything else that could be incorrect and BGs still aren't showing in Nightscout, then you likely have those Bridge values incorrect. To fix that, delete your Dexcom app (don't stop the session before deleting the app...just keep it going). Download the app again from the iPhone's App Store and login to the freshly-downloaded Dexcom app. <strong>Take note</strong> that deleting the app will not stop your session, your session will pick right back up once the transmitter pairs again. The <code>BRIDGE_USER_NAME</code> is not an email address. Use that exact same login now in your Heroku settings. You can leave your Loop's Share account info blank...you just need the transmitter ID going forward.</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See <a href="../../troubleshoot/dexcom_bridge/"><strong>here</strong></a> for troubleshooting tips and information on your Dexcom account.</p>
 </div>
 <h3 id="dexcom-username-issue">Dexcom username issue<a class="headerlink" href="#dexcom-username-issue" title="Permanent link">⌁</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use <code>bridge</code> with an email address, make sure you <a href="../../update/update/">update Nightscout to the latest release</a>.</p>
 </div>
-<p></br></p>
-<p>It seems that Dexcom share somewhere in its systems is not capable of using the username other than ordinary letters.</p>
-<p>By changing the username, this has been solved for everyone who has tried so far. If that doesn't work for you, please report it at <a href="https://github.com/nightscout/cgm-remote-monitor/issues/5608">https://github.com/nightscout/cgm-remote-monitor/issues/5608</a> or if you can comment on any Facebook post that linked to this site.</p>
-<h4 id="change-username">Change username<a class="headerlink" href="#change-username" title="Permanent link">⌁</a></h4>
-<p>Unfortunately, it is not possible to change the username of a Dexcom account. You have to create a whole new account.</p>
-<h4 id="create-new-account">Create new account<a class="headerlink" href="#create-new-account" title="Permanent link">⌁</a></h4>
-<p>You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to <a href="https://www.dexcom.com/">https://www.dexcom.com</a> and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do <strong>not</strong> do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period <code>.</code> underscore <code>_</code> and at <code>@</code> characters creates problems, but we do not know which other characters can create problems.</p>
-<h4 id="reinstall-dexcom-transmitter-app">Reinstall Dexcom Transmitter app<a class="headerlink" href="#reinstall-dexcom-transmitter-app" title="Permanent link">⌁</a></h4>
-<p>When you install the Dexcom app, it is linked to a Dexcom account. Unfortunately, there is no way to switch accounts. What you have to do is simply uninstall the app and reinstall it. In principle, it is the same procedure as changing phone. Of course, this time you should log in with the new account.</p>
-<ul>
-<li>Write down the current Transmitter ID. You can find the ID if you look in settings in the Dexcom app.</li>
-<li>Uninstall the Dexcom app</li>
-<li>Reinstall the Dexcom app</li>
-<li>Log in with your new account</li>
-<li>Follow the instructions in the app.</li>
-<li>For G6 do not select sensor code. The sensor code is already saved on your old transmitter.</li>
-<li>Enter the transmitter ID and wait for pairing</li>
-<li>Answer yes to the question "have you inserted sensor"</li>
-</ul>
-<p>You then have to re-invite your followers.</p>
-<h4 id="update-dexcom-data-in-nightscout">Update Dexcom data in Nightscout<a class="headerlink" href="#update-dexcom-data-in-nightscout" title="Permanent link">⌁</a></h4>
-<p>Check your Heroku settings match your new credentials (see above)</p>
 <p></br></p>
 <h3 id="dexcom-or-carelink-data-stopping-after-a-while">Dexcom or CareLink data stopping after a while<a class="headerlink" href="#dexcom-or-carelink-data-stopping-after-a-while" title="Permanent link">⌁</a></h3>
 <div class="admonition note">

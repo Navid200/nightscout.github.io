@@ -14,7 +14,7 @@
     
     
       
-        <title>digitalocean - Nightscout</title>
+        <title>Deploy another GitHub branch - Nightscout</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#digitalocean" class="md-skip">
+        <a href="#step1-update-your-repository-in-github" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              digitalocean
+              Deploy another GitHub branch
             
           </span>
         </div>
@@ -221,13 +221,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../update/update/" class="md-tabs__link">
+      <a href="../update/" class="md-tabs__link md-tabs__link--active">
         Update
       </a>
     </li>
@@ -423,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NSaaS/" class="md-nav__link">
+      <a href="../../vendors/NSaaS/" class="md-nav__link">
         Paid hosting overview
       </a>
     </li>
@@ -437,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../T1Pal/new_user/" class="md-nav__link">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
         Paid hosting: T1Pal
       </a>
     </li>
@@ -451,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10BE/" class="md-nav__link">
+      <a href="../../vendors/10BE/" class="md-nav__link">
         Paid hosting: 10BE
       </a>
     </li>
@@ -707,12 +709,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -735,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/update/" class="md-nav__link">
+      <a href="../update/" class="md-nav__link">
         Updating your site
       </a>
     </li>
@@ -749,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/redeploy/" class="md-nav__link">
+      <a href="../redeploy/" class="md-nav__link">
         Redeploying
       </a>
     </li>
@@ -761,11 +765,63 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../update/dev_branch/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deploy another GitHub branch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Deploy another GitHub branch
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-update-your-repository-in-github" class="md-nav__link">
+    Step1: Update your repository in GitHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-deploy-in-heroku" class="md-nav__link">
+    Step2: Deploy in Heroku
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-return-to-the-master-release" class="md-nav__link">
+    How to return to the master release
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -777,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/newdatabase/" class="md-nav__link">
+      <a href="../newdatabase/" class="md-nav__link">
         Attach a new Atlas database
       </a>
     </li>
@@ -791,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/upd_stack/" class="md-nav__link">
+      <a href="../upd_stack/" class="md-nav__link">
         Update Heroku Stack
       </a>
     </li>
@@ -805,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/downgrade/" class="md-nav__link">
+      <a href="../downgrade/" class="md-nav__link">
         Downgrade
       </a>
     </li>
@@ -942,8 +998,35 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step1-update-your-repository-in-github" class="md-nav__link">
+    Step1: Update your repository in GitHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-deploy-in-heroku" class="md-nav__link">
+    Step2: Deploy in Heroku
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-return-to-the-master-release" class="md-nav__link">
+    How to return to the master release
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -956,9 +1039,115 @@
               
                 
                 
-                <h1 id="digitalocean">digitalocean<a class="headerlink" href="#digitalocean" title="Permanent link">⌁</a></h1>
-<p>Coming soon</p>
-<p><a href="https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6">https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6</a></p>
+                  <h1>Deploy another GitHub branch</h1>
+                
+                <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
+<p>In rare occasions, like testing a specific fix or a feature that is not released yet (i.e. not in the <code>master</code> branch) you might need to deploy another branch like <code>dev</code> in the example below.</p>
+<p>Do not deploy <code>dev</code> or a branch other than <code>master</code> unless directed to do so (except if you know why you are doing so).</p>
+<h2 id="step1-update-your-repository-in-github">Step1: Update your repository in GitHub<a class="headerlink" href="#step1-update-your-repository-in-github" title="Permanent link">⌁</a></h2>
+<ul>
+<li>Click here to log in at GitHub: <a href="https://github.com/login">https://github.com/login</a>.</li>
+<li>Enter your username or email and your password. Click <code>Sign in</code></li>
+</ul>
+<p><img src="../img/UpdateNS00.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your own <code>cgm-remote-monitor</code> project (<strong>not <code>nightscout/cgm-remote-monitor</code></strong>)</li>
+</ul>
+<p><img src="../img/UpdateNS01.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your repository will open. </li>
+</ul>
+<p><img src="../img/Dev00.png" style="zoom:80%;" ></p>
+<ul>
+<li>In the branch drop down menu (normally showing <code>master</code>) select  <code>dev</code></li>
+</ul>
+<p><img src="../img/Dev01.png" style="zoom:90%;" ></p>
+<p></br></p>
+<ul>
+<li>Click<code>Fetch upstream</code> to update it, then  <code>Fetch and merge</code></li>
+</ul>
+<p><img src="../img/Dev03.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>After a moment, your repository should display <code>This branch is up to date with nightscout:dev</code></li>
+</ul>
+<p><img src="../img/Dev04.png" style="zoom:80%;" ></p>
+<ul>
+<li>If you ran into trouble, try to <a href="../redeploy/">Redeploy</a>.</li>
+</ul>
+<p></br></p>
+<h2 id="step2-deploy-in-heroku">Step2: Deploy in Heroku<a class="headerlink" href="#step2-deploy-in-heroku" title="Permanent link">⌁</a></h2>
+<ul>
+<li>Log in Heroku <a href="https://id.heroku.com/login">https://id.heroku.com/login</a> </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
+</div>
+<p></br></p>
+<p><img src="../img/UpdateNS15.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your app (hidden in yellow)</li>
+</ul>
+<p><img src="../img/UpdateNS16.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Deploy</code></li>
+</ul>
+<p><img src="../img/UpdateNS17.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Verify Heroku is connected to GitHub, if not, click <code>Connect to GitHub</code></li>
+</ul>
+<p><img src="../img/UpdateNS18.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If Heroku is not connected to GitHub, scroll down and click <code>Connect to GitHub</code>, if a popup window opens and requires authorization, click <code>Authorize Heroku</code></li>
+</ul>
+<p><img src="../img/UpdateNS19.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Verify your app <code>cgm-remote-monitor</code> is connected to GitHub</li>
+</ul>
+<p><img src="../img/UpdateNS20.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If it isn't, In <code>Connect to GitHub</code>, type <code>cgm-remote-monitor</code> and click  <code>Search</code> then click <code>Connect</code></li>
+</ul>
+<p><img src="../img/UpdateNS21.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If you have trouble connecting your app, click <code>Disconnect</code> and reconnect it as shown above</li>
+</ul>
+<p><img src="../img/UpdateNS22.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Scroll down to the bottom of the page, select the <code>dev</code> branch and click <code>Deploy Branch</code> </li>
+</ul>
+<p><img src="../img/Dev05.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Build will start and information will scroll in the log window. Do not leave the page, do not interfere and wait for completion. It might take more than 10 minutes. Interrupting the process will lead to a broken site and you'll need to restart deployment.</li>
+</ul>
+<p><img src="../img/UpdateNS24.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Wait until the deploy process completes and click <code>View</code> (if nothing happens click <code>Manage App</code> then upper right <code>Open App</code>)</li>
+</ul>
+<p><img src="../img/UpdateNS25.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your site will open and should be at the latest version. </li>
+<li>Check your <a href="../../nightscout/profile_editor/#profile-view">profile time zone</a> is correct. You're done!</li>
+</ul>
+<p></br></p>
+<h2 id="how-to-return-to-the-master-release">How to return to the <code>master</code> release<a class="headerlink" href="#how-to-return-to-the-master-release" title="Permanent link">⌁</a></h2>
+<p>If things don't go as expected you can simply redeploy your master branch selecting it in the drop down menu:</p>
+<p><img src="../img/UpdateNS23.png" style="zoom:80%;" ></p>
+<p>When the dev branch gets merged into release, just follow the <a href="../update/">classic update method</a>.</p>
                 
               
               
@@ -979,6 +1168,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../redeploy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redeploying" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Redeploying
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../newdatabase/" class="md-footer__link md-footer__link--next" aria-label="Next: Attach a new Atlas database" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Attach a new Atlas database
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

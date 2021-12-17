@@ -14,7 +14,7 @@
     
     
       
-        <title>Heroku - Nightscout</title>
+        <title>Multiple Factor Authentication - Nightscout</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Heroku
+              Multiple Factor Authentication
             
           </span>
         </div>
@@ -221,13 +221,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../update/update/" class="md-tabs__link">
+      <a href="../../update/update/" class="md-tabs__link md-tabs__link--active">
         Update
       </a>
     </li>
@@ -707,12 +709,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -808,6 +812,103 @@
       <a href="../../update/downgrade/" class="md-nav__link">
         Downgrade
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Multiple Factor Authentication
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Multiple Factor Authentication
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-factor-authentication" class="md-nav__link">
+    Multiple Factor Authentication
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Factor Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salesforce-authenticator" class="md-nav__link">
+    Salesforce Authenticator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-authenticator" class="md-nav__link">
+    Built-In Authenticator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-time-password-generator" class="md-nav__link">
+    One-Time Password Generator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-key" class="md-nav__link">
+    Security Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-codes" class="md-nav__link">
+    Recovery Codes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1015,9 +1116,9 @@
                 <h1 id="heroku">Heroku<a class="headerlink" href="#heroku" title="Permanent link">⌁</a></h1>
 <h2 id="multiple-factor-authentication">Multiple Factor Authentication<a class="headerlink" href="#multiple-factor-authentication" title="Permanent link">⌁</a></h2>
 <p>Multiple factor authentication (MFA) also called 2 factors authentication (2FA) is a safety feature preventing malicious access to an account. Once authenticated with your login and password you will be required to confirm your identity with another method, a second factor authentication.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is recommended to setup two MFAs, the second being a copy of the recovery codes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Losing access</p>
+<p>It is recommended to setup at least two MFAs, <strong>one being a copy of the recovery codes</strong>. Salesforce take security very seriously and recovering your account after losing access might range from very complex to impossible. For increased safety, setup more than one authentication method on more than one device.</p>
 </div>
 <p><a href="https://help.salesforce.com/s/articleView?id=000356005&amp;type=1">The requirement begins on February 1, 2022. We encourage you to begin planning now for this change.</a> </p>
 <p>Until this date you can postpone creating a two factor authentication method but it is recommended to create one as soon as possible.</p>
@@ -1036,6 +1137,10 @@
 <p></br></p>
 <h3 id="salesforce-authenticator">Salesforce Authenticator<a class="headerlink" href="#salesforce-authenticator" title="Permanent link">⌁</a></h3>
 <p>Salesforce Authenticator relies on an additional app you will need to install on your phone. It is available in the <a href="https://play.google.com/store/apps/details?id=com.salesforce.authenticator">Google Play Store</a> and the <a href="https://apps.apple.com/us/app/salesforce-authenticator/id782057975">Apple Store</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Losing or removing the Authenticator app</p>
+<p>It is recommended to setup at least two MFAs, <strong>one being a copy of the recovery codes</strong>. If your only authentication method is this app you will lose access if you remove it or lose/change phone! </p>
+</div>
 <p>If you select this option (use the <code>Add</code> button) you will need to install the app to get the passcode called Two-Word Phrase</p>
 <p>Install the app and <code>Add an Account</code>.</p>
 <p><img src="../heroku/img/MFA03b.png" style="zoom:50%;" /></p>
@@ -1102,6 +1207,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../update/downgrade/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Downgrade" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Downgrade
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../troubleshoot/troublehoot/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Troubleshooting
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

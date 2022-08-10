@@ -1153,8 +1153,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#atlas-database-size-verification" class="md-nav__link">
+    Atlas database size verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cleanup" class="md-nav__link">
-    Cleanup:
+    Cleanup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-cleanup" class="md-nav__link">
+    Emergency cleanup
   </a>
   
 </li>
@@ -1520,8 +1534,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#atlas-database-size-verification" class="md-nav__link">
+    Atlas database size verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cleanup" class="md-nav__link">
-    Cleanup:
+    Cleanup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-cleanup" class="md-nav__link">
+    Emergency cleanup
   </a>
   
 </li>
@@ -1663,7 +1691,10 @@
 <p>If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and <a href="../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor">deploy</a> again after <a href="../connection_string/#change-your-atlas-database-password">checking</a> the Atlas connection string is correct.</p>
 </li>
 <li>
-<p>If you don't see any good reason just go ahead:</p>
+<p>If you don't see any good reason <a href="#restart-all-dynos">restart all dynos</a>.</p>
+</li>
+<li>
+<p>Check your <a href="#database-full">database is not full</a>.</p>
 </li>
 </ul>
 <p></br></p>
@@ -1835,14 +1866,17 @@
 </ul>
 <p></br></p>
 <h1 id="database-full">Database full<a class="headerlink" href="#database-full" title="Permanent link">⌁</a></h1>
-<p>Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.</p>
+<p>Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying for an M2 or M5 Shared cluster.</p>
+<p><strong>Note:</strong> <em>If you consider paying for a database upgrade, also think about a <a href="../../vendors/NSaaS">paid hosting service</a>.</em></p>
 <ul>
 <li>Make sure your Nightscout site has <code>Database Size</code> enabled to monitor database capacity. Look <a href="../../nightscout/setup_variables/#dbsize-database-size">here</a> for more information on this plugin.</li>
 </ul>
 <p><img src="../img/TShoot35.png" style="zoom:80%;" ></p>
 <p></br></p>
+<p>If your Nightscout page doesn't open after <a href="#restart-all-dynos">restarting all dynos</a> and you want to rule out a full database, you can try an emergency cleanup of the less important part of your Nightscout site: <code>devicestatus</code>.</p>
+<h5 id="atlas-database-size-verification">Atlas database size verification<a class="headerlink" href="#atlas-database-size-verification" title="Permanent link">⌁</a></h5>
 <ul>
-<li>Check in <a href="https://account.mongodb.com/account/login">Atlas</a></li>
+<li>Log in <a href="https://account.mongodb.com/account/login">Atlas</a></li>
 <li>Open your Nightscout cluster and select <code>Collections</code></li>
 </ul>
 <p><img src="../img/TShoot32.png" style="zoom:80%;" ></p>
@@ -1852,16 +1886,23 @@
 </ul>
 <p><img src="../img/TShoot36.png" style="zoom:80%;" ></p>
 <ul>
-<li>Open Nightscout  <code>Admin tools</code>.</li>
+<li>Open Nightscout  <a href="../../nightscout/discover/#drawer-menu"><code>Admin tools</code></a>. If your site doesn't open jump to <a href="#emergency-cleanup">Emergency cleanup</a>.</li>
 <li>Depending on the collection you identified above, choose which of the following you want to cleanup:</li>
 </ul>
-<h5 id="cleanup">Cleanup:<a class="headerlink" href="#cleanup" title="Permanent link">⌁</a></h5>
+<h5 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">⌁</a></h5>
 <p>You can cleanup (enter the number of days to keep) or delete your devices status:</p>
 <p><img src="../img/TShoot37.png" style="zoom:80%;" ></p>
 <p>Same for <code>Treatments</code>:</p>
 <p><img src="../img/TShoot38.png" style="zoom:80%;" ></p>
-<p>And <code>Glucose entries</code>. If you are reluctant to lose historical data you should consider opting for a paid database solution.</p>
+<p>And <code>Glucose entries</code>. If you are reluctant to lose historical data you should consider opting for a paid database solution or <a href="../../vendors/NSaaS">hosted</a> Nightscout.</p>
 <p><img src="../img/TShoot39.png" style="zoom:80%;" ></p>
+<h5 id="emergency-cleanup">Emergency cleanup<a class="headerlink" href="#emergency-cleanup" title="Permanent link">⌁</a></h5>
+<p>In the Atlas cluster view you opened <a href="#atlas-database-size-verification">above</a>, select the <code>devicestatus</code> collection and click the bin icon to delete it.<br />
+You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.</p>
+<p><img src="../img/TShoot55.png" style="zoom:80%;" ></p>
+<p>Write <code>devicestatus</code> in the box then click <code>Drop</code></p>
+<p><img src="../img/TShoot56.png" style="zoom:80%;" ></p>
+<p><a href="#restart-all-dynos">Restart all dynos</a> in Heroku and when your site opens, consider <a href="#cleanup">cleanup</a> from Admin Tools if your database size exceeds 80%.</p>
 <p></br></p>
 <h1 id="reports-slow-loading-or-timeout">Reports slow loading or timeout<a class="headerlink" href="#reports-slow-loading-or-timeout" title="Permanent link">⌁</a></h1>
 <p>Loopers might experience Nightscout taking an extremely long time or even timing out when creating reports due to the profiles collection database growing too big.</p>

@@ -394,8 +394,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dexcom-g5g6" class="md-nav__link">
-    Dexcom G5/G6
+  <a href="#dexcom-g5g6one" class="md-nav__link">
+    Dexcom G5/G6/ONE
   </a>
   
 </li>
@@ -1075,8 +1075,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dexcom-g5g6" class="md-nav__link">
-    Dexcom G5/G6
+  <a href="#dexcom-g5g6one" class="md-nav__link">
+    Dexcom G5/G6/ONE
   </a>
   
 </li>
@@ -1150,9 +1150,10 @@
 <p>If you're developing an uploader, you'll find the API information in your Nightscout site  at <code>/api-docs</code> and <code>/api3-docs</code>.</p>
 <p></br></p>
 <h2 id="dexcom">Dexcom<a class="headerlink" href="#dexcom" title="Permanent link">⌁</a></h2>
-<h4 id="dexcom-g5g6">Dexcom G5/G6<a class="headerlink" href="#dexcom-g5g6" title="Permanent link">⌁</a></h4>
+<h4 id="dexcom-g5g6one">Dexcom G5/G6/ONE<a class="headerlink" href="#dexcom-g5g6one" title="Permanent link">⌁</a></h4>
 <p><img src="..\img\Upload02.png" /></p>
-<p>If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device. </p>
+<p>If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.<br />
+Dexcom Share is not available with Dexcom ONE.</p>
 <p>For this to work, Nightscout must be configured to use the <code>bridge</code> plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1160,12 +1161,14 @@
 </div>
 <p><em>Please note that at this time (early 2021), the Dexcom G5 system is effectively obsolete but many people are still using stocks of old sensors and transmitters.</em></p>
 <p>If you don't want to use the official Dexcom apps, then you can use <strong>open-source software</strong> apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:</p>
-<p><strong>Android</strong>: xDrip+ for G4, G5 and G6. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. --></p>
-<p><strong>iOS</strong>: Spike or xDrip4iOS for G4, G5 and older G6 transmitters (<strong>not Firefly</strong>) <!-- Spike or xDrip4iOS for G4 (1)(3) --></p>
+<p><strong>Android</strong>: xDrip+ for G4, G5, G6 and ONE. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. --></p>
+<p><strong>iOS</strong>: <br />
+    Spike for G4, G5 and older G6 transmitters (<strong>not Firefly</strong>) <!-- Spike or xDrip4iOS for G4 (1)(3) --><br />
+    xDrip4iOS for G4, G5, G6 and ONE transmitters</p>
 <p><img src="..\img\Upload03.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Dexcom "Firefly" Transmitters</p>
-<p>Any transmitter made before Dexcom switched to the "firefly" range of G6 transmitters is compatible with <strong>Spike</strong> or <strong>xDrip4iOS</strong>. Although there are <em>slight</em> physical differences, the easiest way to check is to look at the Transmitter ID. If it starts with <strong>80xxxx</strong> or <strong>81yxxx</strong> (where <strong>y</strong> is a number) then it is a pre-Firefly transmitter and is compatible. </p>
+<p>Any transmitter made before Dexcom switched to the "firefly" range of G6 transmitters is compatible with <strong>Spike</strong>. Although there are <em>slight</em> physical differences, the easiest way to check is to look at the Transmitter ID. If it starts with <strong>80xxxx</strong> or <strong>81yxxx</strong> (where <strong>y</strong> is a number) then it is a pre-Firefly transmitter and is compatible. </p>
 <p>Most of the useable transmitters that fall into this category at the present time (early 2021) are generally rebatteried or rechargeable/modified 80xxxx or 81xxxx transmitters.</p>
 </div>
 <p>Loop and AAPS will upload your data directly to Nightscout and will act as uploaders.
@@ -1202,9 +1205,9 @@
 <p>The Libre environment is complex and evolves quickly. Before buying a transmitter, please join the respective Facebook groups and make sure that the transmitter you are planning to buy is compatible with your sensor type.</p>
 </div>
 <p>Most of the transmitters have their own proprietary apps. Nearly all of these support the uploading of data to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...). Again, check the transmitter manufacturer's website and the relevant Facebook support groups for information.</p>
-<p><strong>Open-source apps</strong> such as <strong>xDrip+</strong>, <strong>Spike</strong> and <strong>xDrip4iOS</strong> also support most of the above transmitter devices.</p>
-<p>You can connect to the Libre 2 sensor (<strong>EU only</strong>) without an additional transmitter using <a href="https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip">xDrip+</a>, Diabox or <a href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre">xDrip4iOS</a>.</p>
-<p>You can upload automatically from LibreView servers deploying <a href="https://github.com/timoschlueter/nightscout-librelink-up">this</a> project in Heroku.</p>
+<p><strong>Open-source apps</strong> such as <strong>xDrip+</strong>, <strong>Spike</strong> and <strong>xDrip4iOS</strong> also support some of the above transmitter devices.</p>
+<p>You can connect to the Libre 2 sensor (<strong>EU only</strong>) without an additional transmitter using <a href="https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip">xDrip+</a>, and <a href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre">xDrip4iOS</a>. Other Libre 2 sensors can be used directly with Juggluco and Diabox.</p>
+<p>For Libre 3, you can upload automatically from LibreView servers deploying <a href="https://github.com/timoschlueter/nightscout-librelink-up">this</a> project in Heroku, or use xDrip+ to perform this operation.</p>
 <p></br>
 </br></p>
 <h2 id="eversense">Eversense<a class="headerlink" href="#eversense" title="Permanent link">⌁</a></h2>

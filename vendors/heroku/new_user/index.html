@@ -572,6 +572,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../railway.app/migrate/" class="md-nav__link">
+        Railway.app with Atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../fly.io/new_user/" class="md-nav__link">
         Fly.io
       </a>
@@ -614,8 +628,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../digitalocean/new_user/" class="md-nav__link">
-        Digital Ocean
+      <a href="../../google/new_user/" class="md-nav__link">
+        Google Cloud
       </a>
     </li>
   
@@ -642,8 +656,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../google/new_user/" class="md-nav__link">
-        Google Cloud
+      <a href="../../digitalocean/new_user/" class="md-nav__link">
+        Digital Ocean
       </a>
     </li>
   
@@ -658,6 +672,34 @@
     <li class="md-nav__item">
       <a href="../../synology/new_user/" class="md-nav__link">
         Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1Pal/new_user/" class="md-nav__link">
+        NSaaS - T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10BE/" class="md-nav__link">
+        NSaaS - NS10BE
       </a>
     </li>
   
@@ -1342,22 +1384,9 @@ You will be charged 7$ per month for each Heroku app.</p>
 <p>Follow <a href="../../../vendors/mongodb/atlas/#create-an-atlas-database">these steps</a> and come back.</p>
 <p></br></br></p>
 <h2 id="step-4-fork-and-deploy-cgm-remote-monitor">Step 4: Fork and deploy cgm-remote-monitor<a class="headerlink" href="#step-4-fork-and-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h2>
+<p>a) <a href="../../../nightscout/github/#fork-the-nightscout-project">Fork the Nightscout cgm-remote-monitor project</a>.</p>
 <p></br></p>
-<div class="admonition warning">
-<p class="admonition-title">If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding</p>
-<p>Delete your current cgm-remote-monitor fork using <a href="../../update/redeploy/#step-1-cleanup-github">Step 1 of this guide (ONLY STEP1!)</a>. </br></p>
-</div>
-<p>a) You should now have 3 pages opened in your browser: Heroku, Atlas, and Github, Make sure you are logged-in on each one
-(i.e. not asking you to login) before you continue.</p>
-<p>b) Open this link in a new browser page <a href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a>. Click on <code>Fork</code></p>
-<p><img src="../../../nightscout/img/NewNS29.png" style="zoom:70%;" /></p>
-<p>Confirm with <code>Create fork</code></p>
-<p><img src="../../../nightscout/img/NewNS51.png" style="zoom:70%;" /></p>
-<p></br></p>
-<p>c) Wait for a moment</p>
-<p><img src="../../../nightscout/img/NewNS30.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>d) Scroll down and click <code>Deploy to Heroku</code></p>
+<p>b) Scroll down and click <code>Deploy to Heroku</code></p>
 <p><img src="../../../nightscout/img/NewNS31.png" style="zoom:80%;" /></p>
 <p><img src="../../../nightscout/img/NewNS32.png" style="zoom:80%;" /></p>
 <p></br></p>
@@ -1366,19 +1395,19 @@ You will be charged 7$ per month for each Heroku app.</p>
 <p>Below you'll see the minimum required configuration, you can modify the variables later in Heroku.</p>
 </div>
 <p></br></p>
-<p>e) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.</p>
-<p>f) Don’t change the region.</p>
+<p>c) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.</p>
+<p>d) Don’t change the region.</p>
 <p><img src="../../../nightscout/img/NewNS33.png" style="zoom:80%;" /></p>
 <p></br></p>
 <p>Scroll down and setup the following variables:</p>
 <p></br></p>
-<p>g) <code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use @ or ! symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<p>e) <code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use @ or ! symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
 <div class="admonition warning">
 <p class="admonition-title">The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
 </div>
 <p><img src="../../../nightscout/img/NewNS34.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>h) If you want to link your Dexcom Share account as a data source, complete the following lines:</p>
+<p>f) If you want to link your Dexcom Share account as a data source, complete the following lines:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the <code>bridge</code> plugin.</p>
@@ -1398,13 +1427,13 @@ You will be charged 7$ per month for each Heroku app.</p>
 <p>You need to have at least one follower to use Dexcom Share. See <a href="../../../uploader/setup/#dexcom">here</a>.</p>
 </div>
 <p></br></p>
-<p>i) Linking your CareLink account as a data source is <strong>not functional anymore with Heroku</strong>. Do not use the plugin below. There are alternative solutions with an Android phone and a <a href="https://github.com/benceszasz/xDripCareLinkFollower">private version of xDrip+</a> (recommended), or (not recommended: verify availability for your pump and country) a <a href="https://github.com/FredMK/minimed-connect-to-nightscout-wrapper">computer</a> or a <a href="https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki">Raspberry Pi</a> to bridge CareLink to Nightscout.</p>
+<p>g) Linking your CareLink account as a data source is <strong>not functional anymore with Heroku</strong>. Do not use the plugin below. There are alternative solutions with an Android phone and a <a href="https://github.com/benceszasz/xDripCareLinkFollower">private version of xDrip+</a> (recommended), or (not recommended: verify availability for your pump and country) a <a href="https://github.com/FredMK/minimed-connect-to-nightscout-wrapper">computer</a> or a <a href="https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki">Raspberry Pi</a> to bridge CareLink to Nightscout.</p>
 <p><img src="../../../nightscout/img/NewNS36.png" style="zoom:60%;" /></p>
 <p></br></p>
 <p>j) Select the units you’re using in <code>DISPLAY_UNITS</code> acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>).</p>
 <p><img src="../../../nightscout/img/NewNS37.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>k) In <code>ENABLE</code>, copy and paste the following words (separated by a space) so that won't have to think about which you want now:</p>
+<p>h) In <code>ENABLE</code>, copy and paste the following words (separated by a space) so that won't have to think about which you want now:</p>
 <p><code>careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors</code></p>
 <p><strong>If you are using your Dexcom share account as a data source</strong> also add <code>bridge</code> at the end, after a space like this:</p>
 <p><code>careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge</code></p>
@@ -1414,39 +1443,36 @@ You will be charged 7$ per month for each Heroku app.</p>
 <p>You find more information about the <code>ENABLE</code> words on the: <a href="../../../nightscout/setup_variables">Setup page</a></p>
 </div>
 <p></br></p>
-<p>l) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the <code>MONGODB_URI</code> variable field.</p>
-<p>If you compiled all the fields and successfully generated the string this is what you should copy in <code>MONGODB_URI</code>:</p>
-<p style="font-size:18px" id="resultbis">Sorry... something is missing for me to make it automatically...</p>
-
+<p>i) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the <code>MONGODB_URI</code> variable field.</p>
 <p><img src="../../../nightscout/img/NewNS39.png" style="zoom:80%;" /></p>
-<p>If you preferred to make it yourself, make sure it looks like this:</p>
+<p>Make sure it looks like this one below and NOTE: THERE ARE NO &lt; AND &gt; CHARACTERS:</p>
 <p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&amp;w=majority</code></p>
 <p></br></p>
-<p>m) Scroll down to the end of the list and click <code>Deploy app</code></p>
+<p>j) Scroll down to the end of the list and click <code>Deploy app</code></p>
 <p><img src="../../../nightscout/img/NewNS40.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>n) <strong>WAIT</strong> until completion (will take some time). Do not interrupt the process until it's complete.</p>
+<p>k) <strong>WAIT</strong> until completion (will take some time). Do not interrupt the process until it's complete.</p>
 <p><img src="../../../nightscout/img/NewNS41.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>o) Then click <code>View</code> (if nothing happens, click <code>Manage App</code> -&gt; <code>Open App</code>, in upper right corner)</p>
+<p>l) Then click <code>View</code> (if nothing happens, click <code>Manage App</code> -&gt; <code>Open App</code>, in upper right corner)</p>
 <p><img src="../../../nightscout/img/NewNS42.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>p) Your Nightscout site should open and direct you to a new profile creation.</p>
+<p>m) Your Nightscout site should open and direct you to a new profile creation.</p>
 <p><img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" /></p>
 <p></br></p>
-<p>q) Setup your <code>Time zone</code> and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.</p>
+<p>n) Setup your <code>Time zone</code> and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.</p>
 <p><img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>r) Browse down to <code>Authentication status</code> and click <code>Authenticate</code>. Enter your API secret. Click <code>Update</code>.</p>
+<p>o) Browse down to <code>Authentication status</code> and click <code>Authenticate</code>. Enter your API secret. Click <code>Update</code>.</p>
 <p><img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>s) Click <code>Save</code>.</p>
+<p>p) Click <code>Save</code>.</p>
 <p><img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>t) If the following pop-up shows up click <code>OK</code>, and check status (upper right of the window).</p>
+<p>q) If the following pop-up shows up click <code>OK</code>, and check status (upper right of the window).</p>
 <p><img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>u) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code>Profile Editor</code>.</p>
+<p>r) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code>Profile Editor</code>.</p>
 <p><img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" /></p>
 <p></br></p>
 <div class="admonition warning">
@@ -1454,7 +1480,7 @@ You will be charged 7$ per month for each Heroku app.</p>
 <p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a href="../../../nightscout/security">security</a> to your site once you're done with the setup.  </p>
 </div>
 <p></br></p>
-<p>v) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
+<p>s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
 <p><img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" /></p>
 <p></br></p>
 <h5 id="papertrail">Papertrail<a class="headerlink" href="#papertrail" title="Permanent link">⌁</a></h5>

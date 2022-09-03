@@ -467,6 +467,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../vendors/railway.app/migrate/" class="md-nav__link">
+        Railway.app with Atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../vendors/fly.io/new_user/" class="md-nav__link">
         Fly.io
       </a>
@@ -509,8 +523,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
-        Digital Ocean
+      <a href="../../vendors/google/new_user/" class="md-nav__link">
+        Google Cloud
       </a>
     </li>
   
@@ -537,8 +551,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/google/new_user/" class="md-nav__link">
-        Google Cloud
+      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
+        Digital Ocean
       </a>
     </li>
   
@@ -553,6 +567,34 @@
     <li class="md-nav__item">
       <a href="../../vendors/synology/new_user/" class="md-nav__link">
         Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
+        NSaaS - T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/10BE/" class="md-nav__link">
+        NSaaS - NS10BE
       </a>
     </li>
   
@@ -1332,8 +1374,7 @@
                   <h1>Secure your site</h1>
                 
                 <h2 id="nightscout-security">Nightscout Security<a class="headerlink" href="#nightscout-security" title="Permanent link">⌁</a></h2>
-<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
-<p>For <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> users, your page is already secured and views can be defined from your <a href="https://t1pal.com/account/sites/my#Views">Share panel</a>.</p>
+<p><img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> is already secured see <a href="https://t1pal.com/account/sites/my#Views">Share panel</a>.</p>
 <hr />
 <p>Nightscout security model is based on the following assumptions:</p>
 <ul>
@@ -1357,10 +1398,6 @@
 <li>Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.</li>
 <li>Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
-</div>
 <p></br></p>
 <h2 id="https-and-certificate-errors">HTTPS and certificate errors<a class="headerlink" href="#https-and-certificate-errors" title="Permanent link">⌁</a></h2>
 <p>One of the core security mechanisms on web is the SSL encryption applied to HTTP connections. When installed to Heroku, Nightscout by default forces connections to use HTTPS, thus ensuring the connection is encrypted. For secure Nightscout use, it's crucial that you assume something is wrong if you ever see your browser complain the SSL certificate of your Nightscout site does not match or work as expected by the browser. This can be a sign of a so called Man In The Middle (MITM) attack and proceeding with the problematic certificate will subsequently compromise your Nightscout site. If you see an error related to SSL, you should immediately rename the site (see below for instructions).</p>
@@ -1382,13 +1419,12 @@
   <em>Note: make sure your uploader and downloaders can handle special characters, you might need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> for example an API_SECRET like <code>D0n't*H4ck@M3%</code> would be expressed as: <code>D0n%27t%2AH4ck%40M3%25</code></em></li>
 <li>Consider generating the API_SECRET using a password manager</li>
 </ul>
-<p>The API_SECRET is set in the Heroku Settings (see <a href="../setup_variables/#editing-config-vars-in-heroku">here</a> on how to edit the variables).</p>
 <p></br></p>
 <h3 id="im-seeing-a-message-about-authentication-failures">I'm seeing a message about authentication failures<a class="headerlink" href="#im-seeing-a-message-about-authentication-failures" title="Permanent link">⌁</a></h3>
 <p><img src="../img/Security06.png" style="zoom:50%;" /></p>
 <p>This is highly likely caused by you having installed an app on some device with the wrong API_SECRET or access token, and the app trying to authenticate to your Nightscout, or you or one of the family members have just tried to sign into Nightscout with wrong credentials.</p>
 <p>If you have apps running that use the Nightscout REST API, check you have the correct API_SECRET and/or access token configured to each.</p>
-<p>If the message keeps appearing unexpectedly or is reported against multiple IP numbers, it's possible someone is trying to brute force attack your installation and guess your API_SECRET to be able to modify data in your Nightscout. In this situation, we highly recommend you rename the Nightscout site in Heroku to change it's address and pick a name that's hard to guess.</p>
+<p>If the message keeps appearing unexpectedly or is reported against multiple IP numbers, it's possible someone is trying to brute force attack your installation and guess your API_SECRET to be able to modify data in your Nightscout. In this situation, we highly recommend you rename the Nightscout site to change it's address and pick a name that's hard to guess.</p>
 <p></br></p>
 <h3 id="im-seeing-a-message-nightscout-is-readable-by-the-world">I'm seeing a message Nightscout is readable by the world<a class="headerlink" href="#im-seeing-a-message-nightscout-is-readable-by-the-world" title="Permanent link">⌁</a></h3>
 <p><img src="../img/Security05.png" style="zoom:50%;" /></p>
@@ -1411,7 +1447,7 @@
 </div>
 <p>To Take Advantage of Roles, Turn Off Unauthorized Access to Your Site:</p>
 <p>If you want to ensure that ONLY someone with permission to view your site (e.g., a token) is able to view the data, you should configure the <a href="../setup_variables/#auth_default_roles"><code>AUTH_DEFAULT_ROLES</code></a> variable in Heroku. Set the value as: <code>denied</code>.</p>
-<p><a href="../setup_variables/#editing-config-vars-in-heroku">Edit</a> (or add) your variable in Heroku and set it to <code>denied</code>.</p>
+<p>Edit (or add) your variable and set it to <code>denied</code>.</p>
 <p><img src="../img/Admin03.png" style="zoom:100%;" /></p>
 <p></br></p>
 <p>This creates a scenario in which a token will be required for all access (even only view).</p>

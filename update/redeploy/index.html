@@ -467,6 +467,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../vendors/railway.app/migrate/" class="md-nav__link">
+        Railway.app with Atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../vendors/fly.io/new_user/" class="md-nav__link">
         Fly.io
       </a>
@@ -509,8 +523,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
-        Digital Ocean
+      <a href="../../vendors/google/new_user/" class="md-nav__link">
+        Google Cloud
       </a>
     </li>
   
@@ -537,8 +551,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/google/new_user/" class="md-nav__link">
-        Google Cloud
+      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
+        Digital Ocean
       </a>
     </li>
   
@@ -553,6 +567,34 @@
     <li class="md-nav__item">
       <a href="../../vendors/synology/new_user/" class="md-nav__link">
         Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
+        NSaaS - T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/10BE/" class="md-nav__link">
+        NSaaS - NS10BE
       </a>
     </li>
   
@@ -1161,13 +1203,8 @@
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
 <hr />
 <p></br></p>
-<div class="admonition note">
-<p class="admonition-title">Azure Users</p>
-<p>As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you <a href="../../nightscout/new_user/">create a new site with Heroku</a>.</p>
-</div>
-<p></br></p>
 <div class="admonition warning">
-<p class="admonition-title">Multiple Heroku apps and accounts linked to one Github</p>
+<p class="admonition-title">Multiple apps and accounts linked to one Github</p>
 <p>If you delete and redeploy you might need to connect again <code>cgm-remote-monitor</code>. Automatic deploy might not be maintained after a redeploy.</p>
 </div>
 <p></br></p>
@@ -1179,45 +1216,13 @@
 <h2 id="step-1-cleanup-github">Step 1. Cleanup Github<a class="headerlink" href="#step-1-cleanup-github" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <ul>
-<li>Click here to log in at GitHub: <a href="https://github.com/login">https://github.com/login</a>.</li>
-<li>Enter your username or email and your password. Click <code>Sign in</code></li>
-</ul>
-<p><img src="../img/UpdateNS00.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>Select your own <code>cgm-remote-monitor</code> project (not <code>nightscout/cgm-remote-monitor</code>)</li>
-</ul>
-<p><img src="../img/UpdateNS01.png" style="zoom:80%;" ></p>
-<p></br></p>
-<p>Click <code>Settings</code></p>
-<p><img src="../img/UpdateNS26.png" style="zoom:80%;" ></p>
-<p></br></p>
-<p>Scroll down to <code>Danger zone</code> and click <code>Delete this repository</code></p>
-<p><img src="../img/UpdateNS27.png" style="zoom:80%;" ></p>
-<p></br></p>
-<p>Copy and paste your full repository name to confirm then click <code>I understand...</code></p>
-<p><img src="../img/UpdateNS28.png" style="zoom:80%;" ></p>
-<p></br></p>
-<p>You have successfully deleted your copy of the <code>cgm-remote-monitor</code> project.</p>
-<div class="admonition info">
-<p class="admonition-title">Railway new install</p>
-<p><a href="../../../vendors/railway.app/new_user/#step-2-create-an-atlas-account">Stop here and continue setup at Step 2.</a></p>
-</div>
-<p></br></p>
-<ul>
 <li>
-<p>Click this link to go to the official repository: <a href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a></p>
+<p><a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">Delete your current cgm-remote-monitor fork.</a></p>
 </li>
 <li>
-<p>Click on <code>Fork</code></p>
+<p><a href="../../../nightscout/github/#fork-the-nightscout-project">Fork the current Nightscout cgm-remote-monitor project</a>.</p>
 </li>
 </ul>
-<p><img src="../img/UpdateNS29.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>Wait for completion then leave GitHub open.</li>
-</ul>
-<p><img src="../img/UpdateNS30.png" style="zoom:80%;" ></p>
 <p></br></p>
 <h2 id="step-2-deploy-in-heroku">Step 2: Deploy in Heroku<a class="headerlink" href="#step-2-deploy-in-heroku" title="Permanent link">⌁</a></h2>
 <p></br></p>
@@ -1226,7 +1231,8 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
+<p>Salesforce recommends two-factor-authentication for more Heroku security, starting Feb 2022.<br />
+For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
 </div>
 <p></br></p>
 <p><img src="../img/UpdateNS15.png" style="zoom:80%;" ></p>

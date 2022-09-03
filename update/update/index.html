@@ -467,6 +467,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../vendors/railway.app/migrate/" class="md-nav__link">
+        Railway.app with Atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../vendors/fly.io/new_user/" class="md-nav__link">
         Fly.io
       </a>
@@ -509,8 +523,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
-        Digital Ocean
+      <a href="../../vendors/google/new_user/" class="md-nav__link">
+        Google Cloud
       </a>
     </li>
   
@@ -537,8 +551,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vendors/google/new_user/" class="md-nav__link">
-        Google Cloud
+      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
+        Digital Ocean
       </a>
     </li>
   
@@ -553,6 +567,34 @@
     <li class="md-nav__item">
       <a href="../../vendors/synology/new_user/" class="md-nav__link">
         Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
+        NSaaS - T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/10BE/" class="md-nav__link">
+        NSaaS - NS10BE
       </a>
     </li>
   
@@ -879,13 +921,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-users" class="md-nav__link">
-    Azure Users
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#step1-update-your-repository-in-github" class="md-nav__link">
     Step1: Update your repository in GitHub
   </a>
@@ -1165,13 +1200,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azure-users" class="md-nav__link">
-    Azure Users
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#step1-update-your-repository-in-github" class="md-nav__link">
     Step1: Update your repository in GitHub
   </a>
@@ -1235,40 +1263,17 @@
 <li>Internet Explorer: none</li>
 </ul>
 <p></br></p>
-<h2 id="azure-users">Azure Users<a class="headerlink" href="#azure-users" title="Permanent link">⌁</a></h2>
-<p>As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you <a href="../../nightscout/new_user/">create a new site with Heroku</a>.</p>
-<p></br></p>
 <h2 id="step1-update-your-repository-in-github">Step1: Update your repository in GitHub<a class="headerlink" href="#step1-update-your-repository-in-github" title="Permanent link">⌁</a></h2>
-<p></br></p>
 <ul>
-<li>Click here to log in at GitHub: <a href="https://github.com/login">https://github.com/login</a>.</li>
-<li>Enter your username or email and your password. Click <code>Sign in</code></li>
-</ul>
-<p><img src="../img/UpdateNS00.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>Select your own <code>cgm-remote-monitor</code> project (<strong>not <code>nightscout/cgm-remote-monitor</code></strong>)</li>
-</ul>
-<p><img src="../img/UpdateNS01.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>Your repository will open. If you see <code>This branch is xxx commits behind nightscout:master</code> you need to update.</li>
-<li>Select <code>Fetch upstream</code></li>
-</ul>
-<p><img src="../img/UpdateNS01a.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>Select <code>Fetch and merge</code></li>
-</ul>
-<p><img src="../img/UpdateNS01b.png" style="zoom:80%;" ></p>
-<p></br></p>
-<ul>
-<li>After a moment, your repository should display <code>This branch is up to date with nightscout:master</code></li>
-</ul>
-<p><img src="../img/UpdateNS01c.png" style="zoom:80%;" ></p>
-<ul>
-<li>You have now updated your GitHub repository, proceed to <a href="#step2-deploy-in-heroku">Step 2</a>: Deploy in Heroku</li>
-<li>If something went wrong continue below.</li>
+<li>
+<p><a href="../../../nightscout/github/#update-your-nightscout-fork">Update your current cgm-remote-monitor fork.</a></p>
+</li>
+<li>
+<p>If you have he latest version in GitHub, proceed to <a href="#step2-deploy-in-heroku">Step 2</a>: Deploy in Heroku</p>
+</li>
+<li>
+<p>If something went wrong continue below.</p>
+</li>
 </ul>
 <p></br></p>
 <h4 id="use-the-update-script">Use the update script<a class="headerlink" href="#use-the-update-script" title="Permanent link">⌁</a></h4>
@@ -1354,7 +1359,8 @@ and the right hand side is  <code>nightscout/cgm-remote-monitor</code>.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
+<p>Salesforce recommends two-factor-authentication for more Heroku security, starting Feb 2022.<br />
+For an overview of possible methods see <a href="../../vendors/heroku">here</a>.</p>
 </div>
 <p></br></p>
 <p><img src="../img/UpdateNS15.png" style="zoom:80%;" ></p>

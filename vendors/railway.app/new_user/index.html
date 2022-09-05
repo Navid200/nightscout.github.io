@@ -1264,6 +1264,8 @@
 The <a href="https://docs.railway.app/reference/plans#developer-plan-offering">Developer plan</a> should be sufficient for loopers and anyone depending on Nightscout as a mission critical app. Costs will vary depending on your use.<br />
  Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
 <p></br></p>
+<p><img src="../../../img/WIP.png" style="zoom:80%;" /></p>
+<p></br></p>
 <h2 id="set-up-new-nightscout">Set up new Nightscout<a class="headerlink" href="#set-up-new-nightscout" title="Permanent link">⌁</a></h2>
 <h3 id="create-your-railway-and-github-accounts-from-a-computer">Create your Railway and GitHub accounts from a computer.<a class="headerlink" href="#create-your-railway-and-github-accounts-from-a-computer" title="Permanent link">⌁</a></h3>
 <p>Do not change device/computer/browser during the setup process!</p>
@@ -1281,7 +1283,8 @@ The <a href="https://docs.railway.app/reference/plans#developer-plan-offering">D
 <p>If you don't have a GitHub account <a href="../../../nightscout/github/#create-a-github-account">create one</a> and come back.</p>
 <p></br></p>
 <h3 id="step-2-create-a-railway-account">Step 2: Create a Railway account<a class="headerlink" href="#step-2-create-a-railway-account" title="Permanent link">⌁</a></h3>
-<p>a) Open <a href="https://railway.app">railway</a> in a new browser tab and click <code>login</code>.</p>
+<p>a) Open <a href="https://railway.app">Railway</a> in a new browser tab and click <code>login</code>. Login with GitHub.</p>
+<p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
 <p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
 <p></br></p>
 <p>b) Select <code>Authorize Railway App</code>.</p>
@@ -1297,7 +1300,7 @@ The <a href="https://docs.railway.app/reference/plans#developer-plan-offering">D
 <p><img src="../img/Railway05.png" style="zoom:60%;" /></p>
 <p></br></p>
 <p>f) You should now see this. You've created your Railway account,</p>
-<p><img src="../img/Railway06.png" style="zoom:80%;" /></p>
+<p><img src="../img/Railway06a.png" style="zoom:80%;" /></p>
 <p></br></p>
 <h3 id="step-3-deploy-cgm-remote-monitor">Step 3: Deploy cgm-remote-monitor<a class="headerlink" href="#step-3-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h3>
 <p></br></p>
@@ -1307,35 +1310,16 @@ The <a href="https://docs.railway.app/reference/plans#developer-plan-offering">D
 <p>b) Click <code>Configure</code></p>
 <p><img src="../img/Railway07.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>c) Note: if you are asked to verify your account, follow these instructions:</p>
-<ul>
-<li>c1) Click verify account</li>
-</ul>
-<p><img src="../img/Railway18.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>c2) Provide a payment method (don't worry, they are just verifying your card with a temporary charge)</li>
-</ul>
-<p><img src="../img/Railway19.png" style="zoom:80%;" /></p>
-<p></br></p>
-<ul>
-<li>c3) Wait until the payment card is verified successfully</li>
-</ul>
-<p><img src="../img/Railway20.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>d) Now click on the <code>Deploy on Railway</code> button below:</p>
-<p><a href="https://railway.app/new/template/XvAfVW"><img alt="Deploy on Railway" src="https://railway.app/button.svg" /></a></p>
-<p></br></p>
-<p>e) Click <code>Install &amp; Authorize</code></p>
+<p>c) Click <code>Install &amp; Authorize</code></p>
 <p><img src="../img/Railway08.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>f) You will then see this page, scroll down to define the <a href="../../../nightscout/setup_variables/#required-variables">required variables</a> for creating your Nightscout site.</p>
+<p>d) You will then see this page, scroll down to define the <a href="../../../nightscout/setup_variables/#required-variables">required variables</a> for creating your Nightscout site.</p>
 <p><img src="../img/Railway09.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>g) Mind if you see this you will need to <a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">delete the<code>cgm-remote-monitor</code> fork in GitHub</a> and retry <code>Deploy</code> afterwards.</p>
+<p>e) Mind if you see this you will need to <a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">delete the<code>cgm-remote-monitor</code> fork in GitHub</a> and retry <code>Deploy</code> afterwards.</p>
 <p><img src="../img/Railway17.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>h) Setup your Nightscout core variables.</p>
+<p>f) Setup your Nightscout core variables.</p>
 <p><code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use @ or ! symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
 <div class="admonition warning">
 <p class="admonition-title">The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
@@ -1354,34 +1338,34 @@ It's recommended that you leave them like this for now.</p>
 <p>Select the units you’re using in <code>DISPLAY_UNITS</code> acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>).</p>
 <p><img src="../img/Railway13.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>i) You can now <code>Deploy</code>, and wait until it is complete.</p>
+<p>g) You can now <code>Deploy</code>, and wait until it is complete.</p>
 <p><img src="../img/Railway16.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>j) Once your app is deployed, we need to set the MONGODB_URI.</p>
+<p>h) Once your app is deployed, we need to set the MONGODB_URI.</p>
 <p><img src="../img/Railway22.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>k) Click the Mongo service, and then click on the connect tab</p>
+<p>i) Click the Mongo service, and then click on the connect tab</p>
 <p><img src="../img/Railway23.png" style="zoom:80%;" /></p>
 <p><img src="../img/Railway24.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>l) Copy the connection url</p>
+<p>j) Copy the connection url</p>
 <p><img src="../img/Railway25.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>m) Click on the nightscout service and click on the environment tab</p>
+<p>k) Click on the nightscout service and click on the environment tab</p>
 <p><img src="../img/Railway26.png" style="zoom:80%;" />
 <img src="../img/Railway27.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>n) Add a new variable by clicking <code>New Variable</code></p>
+<p>l) Add a new variable by clicking <code>New Variable</code></p>
 <p><img src="../img/Railway28.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>o) For the variable name, enter <code>MONGODB_URI</code></p>
+<p>m) For the variable name, enter <code>MONGODB_URI</code></p>
 <p><img src="../img/Railway29.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>p) For the variable value, paste the connection url we copied from the mongo service. It will look like this:</p>
+<p>n) For the variable value, paste the connection url we copied from the mongo service. It will look like this:</p>
 <p><code>mongodb://mongo:secret@containers-us-west-19.railway.app:6450</code></p>
 <p><img src="../img/Railway30.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>q) Click add, and you should now see the MONGODB_URI is set</p>
+<p>o) Click add, and you should now see the MONGODB_URI is set</p>
 <p><img src="../img/Railway31.png" style="zoom:80%;" />
 <img src="../img/Railway32.png" style="zoom:80%;" /></p>
 <p></br></p>

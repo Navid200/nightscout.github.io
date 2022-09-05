@@ -526,14 +526,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-a-railway-account" class="md-nav__link">
-    Step 2: Create a Railway account
+  <a href="#step-2-create-a-mongodb-atlas-database" class="md-nav__link">
+    Step 2: Create a MongoDB Atlas database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-a-railway-account" class="md-nav__link">
+    Step 3: Create a Railway account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-your-nightscout-project" class="md-nav__link">
+    Step 4: Create your Nightscout project
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-config-vars-in-railway" class="md-nav__link">
+    Editing Config Vars in Railway
+  </a>
   
 </li>
       
@@ -1215,14 +1236,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-a-railway-account" class="md-nav__link">
-    Step 2: Create a Railway account
+  <a href="#step-2-create-a-mongodb-atlas-database" class="md-nav__link">
+    Step 2: Create a MongoDB Atlas database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-a-railway-account" class="md-nav__link">
+    Step 3: Create a Railway account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-your-nightscout-project" class="md-nav__link">
+    Step 4: Create your Nightscout project
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-config-vars-in-railway" class="md-nav__link">
+    Editing Config Vars in Railway
+  </a>
   
 </li>
       
@@ -1239,9 +1281,7 @@
               
                 
                 
-                <p>Coming soon</p>
-<p></br></p>
-<h1 id="railway-mongodb-atlas-nightscout">Railway + MongoDB Atlas Nightscout<a class="headerlink" href="#railway-mongodb-atlas-nightscout" title="Permanent link">⌁</a></h1>
+                <h1 id="railway-mongodb-atlas-nightscout">Railway + MongoDB Atlas Nightscout<a class="headerlink" href="#railway-mongodb-atlas-nightscout" title="Permanent link">⌁</a></h1>
 <hr />
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../img/railway-app-logo.png" style="zoom:80%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" /></p>
 <hr />
@@ -1266,8 +1306,15 @@ The <a href="https://docs.railway.app/reference/plans#developer-plan-offering">D
 If you already have a the <code>cgm-remote-monitor</code> project in GitHub: <a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">delete it</a>.</p>
 <p>Now <a href="../../../nightscout/github/#fork-the-nightscout-project">fork the Nightscout cgm-remote-monitor project</a> (just to make sure it will be up to date).</p>
 <p></br></p>
-<h3 id="step-2-create-a-railway-account">Step 2: Create a Railway account<a class="headerlink" href="#step-2-create-a-railway-account" title="Permanent link">⌁</a></h3>
-<p>a) Open <a href="https://railway.app">railway</a> in a new browser tab and click <code>login</code>.</p>
+<h3 id="step-2-create-a-mongodb-atlas-database">Step 2: Create a MongoDB Atlas database<a class="headerlink" href="#step-2-create-a-mongodb-atlas-database" title="Permanent link">⌁</a></h3>
+<p></br></p>
+<p>If you are migrating from Heroku you already have a MongoDB database, skip to Step 3.</p>
+<p>If you're creating a brand new Railway Nightscout, create a new MongoDB Atlas database <a href="../../mongodb/atlas/#create-an-atlas-database">following these steps</a>. <br />
+Come back when you have your <code>MONGODB_URI</code> connection string.</p>
+<p></br></p>
+<h3 id="step-3-create-a-railway-account">Step 3: Create a Railway account<a class="headerlink" href="#step-3-create-a-railway-account" title="Permanent link">⌁</a></h3>
+<p>a) Open <a href="https://railway.app">Railway</a> in a new browser tab and click <code>login</code>. Login with GitHub.</p>
+<p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
 <p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
 <p></br></p>
 <p>b) Select <code>Authorize Railway App</code>.</p>
@@ -1283,8 +1330,151 @@ If you already have a the <code>cgm-remote-monitor</code> project in GitHub: <a 
 <p><img src="../img/Railway05.png" style="zoom:60%;" /></p>
 <p></br></p>
 <p>f) You should now see this. You've created your Railway account,</p>
+<p><img src="../img/Railway06a.png" style="zoom:80%;" /></p>
+<p></br></p>
+<h3 id="step-4-create-your-nightscout-project">Step 4: Create your Nightscout project<a class="headerlink" href="#step-4-create-your-nightscout-project" title="Permanent link">⌁</a></h3>
+<p>a) Click on <code>Create a New Project</code></p>
 <p><img src="../img/Railway06.png" style="zoom:80%;" /></p>
 <p></br></p>
+<p>b) Select <code>Deploy from GitHub repo</code></p>
+<p><img src="../img/RailwayM01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>c) Then <code>Configure GitHub App</code></p>
+<p><img src="../img/RailwayM02.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>d) Click <code>Only Select repositories</code> and from the <code>Select Repositories button</code> choose your <code>cgm-remote-monitor</code> Nightscout project. Click then <code>Install &amp; Authorize</code>.</p>
+<p><img src="../img/Railway08.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>e) Select your own <code>cgm-remote-monitor</code> project</p>
+<p><img src="../img/RailwayM03.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>f) Click <code>Add variables</code> </p>
+<p><img src="../img/RailwayM04.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Now you will need to add your Nightscout core variables.<br />
+Type the variable name in the left box (where you see <code>NEW_VARIABLE</code>) and the variable value in the right box (where you see <code>VALU3)</code> then click the <code>Add</code> button.</p>
+<p><img src="../img/RailwayM05.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Let's start.</p>
+<p></br></p>
+<p>g) Enter the first variable: <code>API_SECRET</code> then click the <code>Add</code> button</p>
+<p><code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use <code>@</code> or other symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<div class="admonition warning">
+<p class="admonition-title">The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<p><img src="../img/RailwayM06.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>h) Click the <code>+New Variable</code> button and decide the units you will be using with <code>DISPLAY_UNITS</code>, acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>)  then click the <code>Add</code> button.</p>
+<p><img src="../img/RailwayM07.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>i) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the <code>MONGODB_URI</code> variable field  then click the <code>Add</code> button.</p>
+<div class="admonition note">
+<p class="admonition-title">Migrating from Heroku</p>
+<p><a href="../../heroku/new_user#editing-config-vars-in-heroku">Edit your Heroku site variables</a> and copy the <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code> variable.<br />
+If you lost access to Heroku, <a href="../../../troubleshoot/connection_string/#recover-your-connection-string">recover the connection string</a> from MongoDB Atlas.</p>
+</div>
+<p><img src="../img/RailwayM08.png" style="zoom:80%;" /></p>
+<p>Make sure it looks like this one below and NOTE: THERE ARE NO &lt; AND &gt; CHARACTERS:</p>
+<p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&amp;w=majority</code></p>
+<p></br></p>
+<p>j) If you want to link your Dexcom Share account as a data source, add the following lines:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the <code>bridge</code> plugin.</p>
+</div>
+<p>In <code>BRIDGE_USER_NAME</code> put your Dexcom username (it can also be an email)  then click the <code>Add</code> button</p>
+<p><img src="../img/RailwayM09.png" style="zoom:80%;" /></p>
+<p>In <code>BRIDGE_PASSWORD</code> put your Dexcom password then click the <code>Add</code> button</p>
+<p><img src="../img/RailwayM10.png" style="zoom:80%;" /></p>
+<p><code>BRIDGE_SERVER</code> is either <code>US</code> if you live in the US or <code>EU</code> if you don't then click the <code>Add</code> button</p>
+<p><img src="../img/RailwayM11.png" style="zoom:80%;" /></p>
+<p></br></p>
+<div class="admonition info">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See <a href="../../../troubleshoot/dexcom_bridge/">here</a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You need to have at least one follower to use Dexcom Share. See <a href="../../../uploader/setup/#dexcom">here</a>.</p>
+</div>
+<p></br></p>
+<p>k) Linking your CareLink account as a data source is <strong>has not been tested yet with Railway</strong>. There are alternative solutions with an Android phone and a <a href="https://github.com/benceszasz/xDripCareLinkFollower">private version of xDrip+</a> (recommended), or (not recommended: verify availability for your pump and country) a <a href="https://github.com/FredMK/minimed-connect-to-nightscout-wrapper">computer</a> or a <a href="https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki">Raspberry Pi</a> to bridge CareLink to Nightscout.</p>
+<p></br></p>
+<p>l) Now add <code>ENABLE</code>, copy and paste the following words (separated by a space) so that won't have to think about which you want now:</p>
+<p><code>careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors</code></p>
+<p><strong>If you are using your Dexcom share account as a data source</strong> also add <code>bridge</code> at the end, after a space like this:</p>
+<p><code>careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge</code></p>
+<p><img src="../img/RailwayM11.png" style="zoom:80%;" /></p>
+<div class="admonition note">
+<p class="admonition-title"><code>ENABLE</code> words</p>
+<p>You find more information about the <code>ENABLE</code> words on the: <a href="../../../nightscout/setup_variables">Setup page</a></p>
+</div>
+<p></br></p>
+<div class="admonition note">
+<p class="admonition-title">Migrating from Heroku</p>
+<p>If you're migrating your project from Heroku, <a href="../../heroku/new_user/#editing-config-vars-in-heroku">display all variables in Heroku</a> and copy all those with a value into Railway.<br />
+See below how to add variables in Railway but use your Heroku values.</p>
+</div>
+<p></br></p>
+<p>m) Once all variables entered wait until deploy completes.</p>
+<p><img src="../img/RailwayM13.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>n) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.<br />
+Click on the link to open it.</p>
+<p><img src="../img/RailwayM14.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>m) Your Nightscout site should open and direct you to a new profile creation.</p>
+<p><img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" /></p>
+<p></br></p>
+<p>n) Setup your <code>Time zone</code> and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.</p>
+<p><img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>o) Browse down to <code>Authentication status</code> and click <code>Authenticate</code>. Enter your API secret. Click <code>Update</code>.</p>
+<p><img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>p) Click <code>Save</code>.</p>
+<p><img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>q) If the following pop-up shows up click <code>OK</code>, and check status (upper right of the window).</p>
+<p><img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>r) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code>Profile Editor</code>.</p>
+<p><img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" /></p>
+<p></br></p>
+<div class="admonition warning">
+<p class="admonition-title">Privacy warning</p>
+<p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a href="../../../nightscout/security">security</a> to your site once you're done with the setup.  </p>
+</div>
+<p></br></p>
+<p>s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
+<p><img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" /></p>
+<p></br></p>
+<h2 id="editing-config-vars-in-railway">Editing Config Vars in Railway<a class="headerlink" href="#editing-config-vars-in-railway" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>a) Open <a href="https://railway.app">Railway</a> and click <code>login</code>. Login with GitHub.</p>
+<p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
+<p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>b) Select your Nightscout project.</p>
+<p><img src="../img/RailwayM15.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>c) Select your web app.</p>
+<p><img src="../img/RailwayM16.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>d) Click on <code>Variables</code>.</p>
+<p><img src="../img/RailwayM17.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>e) You can perform various operations on your variables:</p>
+<ol>
+<li>Add a new variable with <code>+ New Variable</code></li>
+<li>View the variable value with <code>Show Value</code></li>
+<li>Edit or delete the variable or its value with the line end menu</li>
+</ol>
+<p><img src="../img/RailwayM18.png" style="zoom:80%;" /></p>
                 
               
               

@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flyio" class="md-skip">
+        <a href="#flyio-nightscout" class="md-skip">
           Skip to content
         </a>
       
@@ -525,8 +525,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrate-nightscout" class="md-nav__link">
-    Migrate Nightscout
+  <a href="#editing-config-vars-in-flyio" class="md-nav__link">
+    Editing Config Vars in Fly.io
   </a>
   
 </li>
@@ -535,6 +535,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrate/" class="md-nav__link">
+        Migrate Heroku to Fly.io
+      </a>
     </li>
   
 
@@ -1180,8 +1194,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrate-nightscout" class="md-nav__link">
-    Migrate Nightscout
+  <a href="#editing-config-vars-in-flyio" class="md-nav__link">
+    Editing Config Vars in Fly.io
   </a>
   
 </li>
@@ -1199,19 +1213,54 @@
               
                 
                 
-                <h1 id="flyio">Fly.IO<a class="headerlink" href="#flyio" title="Permanent link">⌁</a></h1>
-<p><img alt="" src="../../img/flyio-logo.png" /></p>
+                <h1 id="flyio-nightscout">Fly.io Nightscout<a class="headerlink" href="#flyio-nightscout" title="Permanent link">⌁</a></h1>
+<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" /></p>
+<div class="admonition info">
+<p class="admonition-title">Cost</p>
+</div>
+<p>Nightscout is expected to run without charges in the <a href="https://fly.io/docs/about/pricing/#free-tier">free tier</a>.<br />
+Most operations involve CLI and are rather complex.<br />
+Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
+<p></br></p>
 <h2 id="set-up-new-nightscout">Set up new Nightscout<a class="headerlink" href="#set-up-new-nightscout" title="Permanent link">⌁</a></h2>
 <p>Fly.io is managed through a command line app.</p>
-<h2 id="migrate-nightscout">Migrate Nightscout<a class="headerlink" href="#migrate-nightscout" title="Permanent link">⌁</a></h2>
-<ul>
-<li>
-<p><a href="https://fly.io/launch/heroku">Migrate from heroku service</a></p>
-</li>
-<li>
-<p><a href="https://fly.io/docs/rails/getting-started/migrate-from-heroku/">Full migration docs</a></p>
-</li>
-</ul>
+<p>Not documented yet.</p>
+<p></br></p>
+<h2 id="editing-config-vars-in-flyio">Editing Config Vars in Fly.io<a class="headerlink" href="#editing-config-vars-in-flyio" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<div class="admonition warning">
+<p class="admonition-title">Secrets</p>
+<p>You <strong>cannot see the values of your variables as they are secret</strong>.<br />
+You can only delete them and set them: you <strong>cannot edit them</strong>.<br />
+Please make sure you write them down somewhere!</p>
+</div>
+<p></br></p>
+<p><strong>Once Nightscout deployed, you need to install <a href="https://fly.io/docs/hands-on/install-flyctl/">flyctl</a> to access your variables in order to change or customize your site.</strong>
+Variables are described <a href="../../../nightscout/setup_variables/#nightscout-config-vars">here</a>.</p>
+<p><a href="https://fly.io/docs/hands-on/sign-in/">Sign in with GitHub</a> in your CLI interface (Powershell/Terminal).<br />
+A new browser will open. Select the entry with your email address.<br />
+If required, authenticate through GitHub.</p>
+<p><img src="../img/FlyM16.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Fly.io variables are named <code>Secrets</code> and you cannot visualize them.<br />
+Look <a href="https://fly.io/docs/getting-started/working-with-fly-apps/#working-with-secrets">here</a> for more details.</p>
+<p></br></p>
+<p>If you want to create a new variable or modify an existing one you need to use the <code>flyctl secrets set</code> command.<br />
+For example if you want to set your Nightscout site vertical scale to linear:</p>
+<pre><code>flyctl secrets set SCALE_Y=&quot;linear&quot; -a yourappname
+</code></pre>
+
+<p>If your <code>SCALE_Y</code> variable was already set to <code>linear</code> you will see the following message:<br />
+<code>Error No change detected to secrets. Skipping release.</code></p>
+<p>When changing a variable, the app will automatically redeploy. You will see this sequence (it will take a few minutes):</p>
+<pre><code>Release v1 created
+==&gt; Monitoring deployment
+
+ 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
+--&gt; v1 deployed successfully
+</code></pre>
+
+<p></br></p>
                 
               
               
@@ -1252,13 +1301,13 @@
       
       
         
-        <a href="../../northflank/new_user/" class="md-footer__link md-footer__link--next" aria-label="Next: Northflank" rel="next">
+        <a href="../migrate/" class="md-footer__link md-footer__link--next" aria-label="Next: Migrate Heroku to Fly.io" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Northflank
+              Migrate Heroku to Fly.io
             </div>
           </div>
           <div class="md-footer__button md-icon">

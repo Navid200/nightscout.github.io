@@ -1303,16 +1303,17 @@ Make sure you read and undertand <strong><a href="/#how-much-does-it-cost">this<
 <p><a href="../../vendors/heroku/new_user">Heroku</a> with MongoDB Atlas.</p>
 <h4 id="work-in-progress-solutions">Work in progress solutions:<a class="headerlink" href="#work-in-progress-solutions" title="Permanent link">⌁</a></h4>
 <p><a href="../../vendors/railway.app/new_user">Railway.io</a><br />
-<a href="../../vendors/railway.app/migrate">Railway.io with MongoDB Atlas</a> (can be used for Heroku migration).</p>
+<a href="../../vendors/railway.app/migrate">Railway.io with MongoDB Atlas</a> (can be used for Heroku migration).<br />
+<a href="../../vendors/fly.io/migrate/">MIgrate to Fly.io with MongoDB Atlas</a>.</p>
 <h4 id="external-documentation-to-be-consolidated">External documentation to be consolidated:<a class="headerlink" href="#external-documentation-to-be-consolidated" title="Permanent link">⌁</a></h4>
-<p><a href="../../vendors/MVPS/new_user">MVPS</a></p>
-<p><a href="../../vendors/digitalocean/new_user">Digital Ocean</a></p>
-<p><a href="../../vendors/oracle/new_user">Oracle</a></p>
-<p><a href="../../vendors/synology/new_user">Synology</a></p>
+<p><a href="../../vendors/google/new_user">Google Cloud</a><br />
+<a href="../../vendors/MVPS/new_user">MVPS</a><br />
+<a href="../../vendors/digitalocean/new_user">Digital Ocean</a><br />
+<a href="../../vendors/oracle/new_user">Oracle</a><br />
+<a href="../../vendors/synology/new_user">Synology</a></p>
 <h4 id="exploration-paths">Exploration paths:<a class="headerlink" href="#exploration-paths" title="Permanent link">⌁</a></h4>
-<p><a href="../../vendors/azure/new_azure">Azure</a></p>
-<p><a href="../../vendors/google/new_user">Google Cloud</a></p>
-<p><a href="../../vendors/northflank/new_user">Northflank</a></p>
+<p><a href="../../vendors/azure/new_azure">Azure</a><br />
+<a href="../../vendors/northflank/new_user">Northflank</a></p>
 <h2 id="vendors-comparison-table">Vendors comparison table<a class="headerlink" href="#vendors-comparison-table" title="Permanent link">⌁</a></h2>
 <p>Click on the vendor logo.</p>
 <table style="padding:10px">
@@ -1366,6 +1367,13 @@ Make sure you read and undertand <strong><a href="/#how-much-does-it-cost">this<
         <td>High</td>
     </tr>
     <tr>
+        <td><a href="/vendors/google/new_user"><img src="../../vendors/img/GoogleCloud.png" align="center"></td>
+        <td>Free -></br>$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>High</td>
+    </tr>
+    <tr>
         <td><img src="../../vendors/img/Oracle.png" align="center"></td>
         <td>Free -></br>$/month</td>
         <td>Yes</td>
@@ -1413,8 +1421,104 @@ Make sure you read and undertand <strong><a href="/#how-much-does-it-cost">this<
 <h2 id="security-and-safekeeping">Security and safekeeping<a class="headerlink" href="#security-and-safekeeping" title="Permanent link">⌁</a></h2>
 <p>It's <strong>highly important</strong> you understand you have to take computer security seriously when setting up Nightscout. We assume you have full legal ownership of all data being stored in your installation of Nightscout and that there are thus no liabilities you'd need to respond to regarding the data. Depending on how you use Nightscout, an unauthorized user could cause harm by for example changing the CGM data shown by Nightscout. We have no evidence of this having ever happened to anyone, but to keep it that way, take the following guidelines to heart:</p>
 <ul>
-<li>Use the same email address for all accounts to ensure you have access to the accounts going forward. Do not use a disposable email address.</li>
-<li>Do not use the same password for all your accounts, and choose passwords that are not easy to guess.</li>
+<li>
+<p><table style="padding:10px">
+      <tr>
+          <td>Vendor</td>
+        <td>Cost (USD)</td>
+          <td>Web page</td>
+          <td>Data base</td>
+          <td>Complexity</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/T1Pal/new_user/"><img src="../../vendors/img/T1Pal.png" align="center"></a></td>
+        <td>11.99$/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>None</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/10BE/"><img src="../../vendors/img/10BE.png" align="center"></a></td>
+        <td>max 4.99€/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>None</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/heroku/new_user/"><img src="../../vendors/img/Heroku.png" align="center"></a></td>
+        <td>7$/month</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Medium</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/mongodb/atlas/#create-an-atlas-database"><img src="../../vendors/img/Atlas.png" align="center"></a></td>
+        <td>Free -&gt;</br>9$/month</td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Medium</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/railway.app/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
+          <td>Free -&gt;</br>5$/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Medium</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
+          <td>Free -&gt;</br>5$/month</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><img src="../../vendors/img/Oracle.png" align="center"></td>
+          <td>Free -&gt;</br>$/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><img src="../../vendors/img/MVPS.png" align="center"></td>
+        <td>3$/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
+        <td>6$/month</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><img src="../../vendors/img/RPi.png" align="center"></td>
+        <td>Hardware</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><img src="../../vendors/img/Synology.png" align="center"></td>
+        <td>Hardware</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><a href="/vendors/azure/new_azure/"><img src="../../vendors/img/Azure.png" align="center"></a>         </td>
+          <td>variable</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>High</td>
+       </tr>
+  </table></p>
+</li>
+<li>
+<p>Do not use the same password for all your accounts, and choose passwords that are not easy to guess.</p>
+</li>
 <li>Do not use the API_SECRET for the Atlas database password.</li>
 <li>Do not use your Dexcom or CareLink user name or password for Nightscout components.</li>
 <li>Do not share the API_SECRET or other passwords to your accounts to others.</li>

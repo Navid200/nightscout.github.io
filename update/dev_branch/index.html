@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../troubleshoot/troublehoot/" class="md-tabs__link">
+      <a href="../../troubleshoot/troubleshoot/" class="md-tabs__link">
         Troubleshoot
       </a>
     </li>
@@ -966,6 +966,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step2-deploy-in-railway" class="md-nav__link">
+    Step2: Deploy in Railway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-return-to-the-master-release" class="md-nav__link">
     How to return to the master release
   </a>
@@ -976,20 +983,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newdatabase/" class="md-nav__link">
-        Attach a new Atlas database
-      </a>
     </li>
   
 
@@ -1091,8 +1084,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshoot/troublehoot/" class="md-nav__link">
+      <a href="../../troubleshoot/troubleshoot/" class="md-nav__link">
         Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/railway/" class="md-nav__link">
+        Railway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/atlas/" class="md-nav__link">
+        MongoDB Atlas
       </a>
     </li>
   
@@ -1107,20 +1156,6 @@
     <li class="md-nav__item">
       <a href="../../troubleshoot/dexcom_bridge/" class="md-nav__link">
         Dexcom bridge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshoot/connection_string/" class="md-nav__link">
-        Connection failure
       </a>
     </li>
   
@@ -1202,6 +1237,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step2-deploy-in-railway" class="md-nav__link">
+    Step2: Deploy in Railway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-return-to-the-master-release" class="md-nav__link">
     How to return to the master release
   </a>
@@ -1223,7 +1265,7 @@
                 
                   <h1>Deploy another GitHub branch</h1>
                 
-                <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
+                <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> or <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" /></p>
 <p></br></p>
 <p>In rare occasions, like testing a specific fix or a feature that is not released yet (i.e. not in the <code>master</code> branch) you might need to deploy another branch like <code>dev</code> in the example below.</p>
 <p>Do not deploy <code>dev</code> or a branch other than <code>master</code> unless directed to do so (except if you know why you are doing so).</p>
@@ -1263,6 +1305,7 @@
 <p></br></p>
 <h2 id="step2-deploy-in-heroku">Step2: Deploy in Heroku<a class="headerlink" href="#step2-deploy-in-heroku" title="Permanent link">⌁</a></h2>
 <ul>
+<li>Skip this step for Railway</li>
 <li>Log in Heroku <a href="https://id.heroku.com/login">https://id.heroku.com/login</a> </li>
 </ul>
 <div class="admonition note">
@@ -1327,9 +1370,50 @@
 <li>Check your <a href="../../nightscout/profile_editor/#profile-view">profile time zone</a> is correct. You're done!</li>
 </ul>
 <p></br></p>
+<h2 id="step2-deploy-in-railway">Step2: Deploy in Railway<a class="headerlink" href="#step2-deploy-in-railway" title="Permanent link">⌁</a></h2>
+<ul>
+<li>Open <a href="https://railway.app">Railway</a> and click <code>login</code>. Login with GitHub.</li>
+</ul>
+<p><img src="../../../vendors/railway.app/img/Railway00.png" style="zoom:80%;" /></p>
+<p><img src="../../../vendors/railway.app/img/Railway01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Select your Nightscout project.</li>
+</ul>
+<p><img src="../../../vendors/railway.app/img/RailwayM15.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Select your web app.</li>
+</ul>
+<p><img src="../../../vendors/railway.app/img/RailwayM16.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>
+<p>Select <code>Settings</code> and look into <code>Environment</code>.  </p>
+</li>
+<li>
+<p>Change the <code>Deployment Trigger</code> with <code>dev</code> (it was showing <code>master</code>).</p>
+</li>
+</ul>
+<p><img src="../img/Dev07.png" style="zoom:80%;" /></p>
+<ul>
+<li>
+<p>If you only see <code>master</code> in the list you need to <a href="../../update/redeploy/#step-1-cleanup-github">delete and fork your Nightscout repository in GitHub</a> <strong>taking care to select all branches when you reach the following step!</strong>.<br />
+  <img src="../img/Dev06.png" style="zoom:80%;" /><br />
+  Then </p>
+</li>
+<li>
+<p>Once <code>dev</code> selected Railway will deploy automatically.</p>
+</li>
+</ul>
+<p></br></p>
+<p></br></p>
 <h2 id="how-to-return-to-the-master-release">How to return to the <code>master</code> release<a class="headerlink" href="#how-to-return-to-the-master-release" title="Permanent link">⌁</a></h2>
 <p>If things don't go as expected you can simply redeploy your master branch selecting it in the drop down menu:</p>
+<p>Heroku:</p>
 <p><img src="../img/UpdateNS23.png" style="zoom:80%;" ></p>
+<p>Railway:</p>
+<p><img src="../img/Dev08.png" style="zoom:80%;" /></p>
 <p>When the dev branch gets merged into release, just follow the <a href="../update/">classic update method</a>.</p>
                 
               
@@ -1371,13 +1455,13 @@
       
       
         
-        <a href="../newdatabase/" class="md-footer__link md-footer__link--next" aria-label="Next: Attach a new Atlas database" rel="next">
+        <a href="../../vendors/heroku/hobbyplan/" class="md-footer__link md-footer__link--next" aria-label="Next: Heroku Hobby plan upgrade" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Attach a new Atlas database
+              Heroku Hobby plan upgrade
             </div>
           </div>
           <div class="md-footer__button md-icon">

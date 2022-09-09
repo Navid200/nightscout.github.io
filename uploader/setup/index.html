@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../troubleshoot/troublehoot/" class="md-tabs__link">
+      <a href="../../troubleshoot/troubleshoot/" class="md-tabs__link">
         Troubleshoot
       </a>
     </li>
@@ -1040,20 +1040,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/newdatabase/" class="md-nav__link">
-        Attach a new Atlas database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../vendors/heroku/hobbyplan/" class="md-nav__link">
         Heroku Hobby plan upgrade
       </a>
@@ -1144,8 +1130,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshoot/troublehoot/" class="md-nav__link">
+      <a href="../../troubleshoot/troubleshoot/" class="md-nav__link">
         Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/railway/" class="md-nav__link">
+        Railway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshoot/atlas/" class="md-nav__link">
+        MongoDB Atlas
       </a>
     </li>
   
@@ -1160,20 +1202,6 @@
     <li class="md-nav__item">
       <a href="../../troubleshoot/dexcom_bridge/" class="md-nav__link">
         Dexcom bridge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshoot/connection_string/" class="md-nav__link">
-        Connection failure
       </a>
     </li>
   
@@ -1333,9 +1361,14 @@
 </div>
 <hr />
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
-<p>Your <code>Nightscout URL</code> defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.</p>
+<p>Your <code>Nightscout URL</code> defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser. It usually looks like: <code>https://yoursitename.herokuapp.com</code></p>
 <p><img src="../../nightscout/img/SetupNS44.png" style="zoom:80%;" /></p>
-<p>Your Nightscout password, is the <code>API_SECRET</code> variable you can find editing your Heroku variables like <a href="../../nightscout/new_user/#editing-config-vars-in-heroku">this</a>.</p>
+<p>Your Nightscout password, is the <code>API_SECRET</code> variable you can find editing your Heroku variables like <a href="../../../vendors/heroku/new_user/#editing-config-vars-in-heroku">this</a>.</p>
+<hr />
+<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" /></p>
+<p>Your <code>Nightscout URL</code> defined in Railway by your Web app name, as shown in your <a href="https://railway.app/dashboard">Dashboard</a>. It usually looks like: <code>https://web-production-xxx.up.railway.app</code></p>
+<p><img src="../../../vendors/railway.app/img/RailwayM14.png" style="zoom:80%;" /></p>
+<p>Your Nightscout password, is the <code>API_SECRET</code> variable you can find editing your Railway variables like <a href="../../../vendors/railway.app/new_user/#editing-variables-in-railway">this</a>.</p>
 <hr />
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /></p>
 <p>You will find the <code>Uploader url</code> and <code>Api Secret</code> required to configure your uploader <a href="https://www.t1pal.com/account/sites/my#Uploaders">here</a>.</p>
@@ -1349,12 +1382,6 @@
 </div>
 <p>On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.</p>
 <p><img src="../img/UploadCFG09.png" style="zoom:60%;" /></p>
-<p></br></p>
-<hr />
-<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /></p>
-<p>In order to use the Dexcom Share servers to upload to Nightscout, you need to setup (and if not present add) the following variables in Heroku:</p>
-<p>From <code>Settings</code>, click on the  <code>Reveal Config Vars</code></p>
-<p><img src="../../nightscout/img/config-vars.png" width="800"></p>
 <p></br></p>
 <p>Verify, update or add these variables:</p>
 <p><img src="../../nightscout/img/NewNS35.png" style="zoom:80%;" /></p>
@@ -1393,7 +1420,9 @@
 <h2 id="xdrip"><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><a class="headerlink" href="#xdrip" title="Permanent link">⌁</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Mind the syntax!</p>
-<p><strong><code>https://API_SECRET@mysite.herokuapp.com/api/v1/</code></strong></p>
+<p><span style="font-size:larger;"><strong><code>https://API_SECRET@my_nightscout_url/api/v1/</code></strong></span><br />
+<code>my_nightscout_url</code> will depend on where your site is hosted (herokuapp.com, railway.app, fly.io, ...)<br />
+You will find your <code>API_SECRET</code>in your site variables.</p>
 </div>
 <p><img src="../img/UploadCFG00.png" style="zoom:80%;" /></p>
 <p>Facebook Group <a href="https://www.facebook.com/groups/xDripG5">xDrip</a></p>

@@ -1,0 +1,2050 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../NS-logo-std.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>MongoDB Atlas - Nightscout</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/admonitions.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mongodb-atlas-troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nightscout" class="md-header__button md-logo" aria-label="Nightscout" data-md-component="logo">
+      
+  <img src="../../NS-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nightscout
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MongoDB Atlas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../nightscout/new_user/" class="md-tabs__link">
+        DIY Nightscout
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../nightscout/setup_variables/" class="md-tabs__link">
+        Configure
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../nightscout/discover/" class="md-tabs__link">
+        Use
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../update/update/" class="md-tabs__link">
+        Update
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshoot/" class="md-tabs__link md-tabs__link--active">
+        Troubleshoot
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../translate/" class="md-tabs__link">
+      Translation
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nightscout" class="md-nav__button md-logo" aria-label="Nightscout" data-md-component="logo">
+      
+  <img src="../../NS-logo.png" alt="logo">
+
+    </a>
+    Nightscout
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        What is Nightscout?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploader/uploaders/" class="md-nav__link">
+        How do I upload my data?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          DIY Nightscout
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DIY Nightscout" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DIY Nightscout
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/new_user/" class="md-nav__link">
+        Classic DIY Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/mongodb/atlas/" class="md-nav__link">
+        MongoDB Atlas database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/heroku/new_user/" class="md-nav__link">
+        Heroku Hobby plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/railway.app/new_user/" class="md-nav__link">
+        Railway.app
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/railway.app/migrate/" class="md-nav__link">
+        Railway.app with Atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/fly.io/new_user/" class="md-nav__link">
+        Fly.io
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/fly.io/migrate/" class="md-nav__link">
+        Migrate Heroku to Fly.io
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/northflank/new_user/" class="md-nav__link">
+        Northflank
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/oracle/new_user/" class="md-nav__link">
+        Oracle Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/google/new_user/" class="md-nav__link">
+        Google Cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/MVPS/new_user/" class="md-nav__link">
+        MVPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/digitalocean/new_user/" class="md-nav__link">
+        Digital Ocean
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/synology/new_user/" class="md-nav__link">
+        Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/T1Pal/new_user/" class="md-nav__link">
+        NSaaS - T1Pal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/10BE/" class="md-nav__link">
+        NSaaS - NS10BE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Configure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Configure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/setup_variables/" class="md-nav__link">
+        Configure your Nightscout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uploader/setup/" class="md-nav__link">
+        Configure your Uploader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/downloaders/" class="md-nav__link">
+        Follower Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/wearable/" class="md-nav__link">
+        Nightscout on your watch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/multiadmin/" class="md-nav__link">
+        Running multiple sites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/close_loop/" class="md-nav__link">
+        Closed-loop Systems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Use
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Use" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Use
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/discover/" class="md-nav__link">
+        Discover your site
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/security/" class="md-nav__link">
+        Secure your site
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/reports/" class="md-nav__link">
+        Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/profile_editor/" class="md-nav__link">
+        Profile Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/admin_tools/" class="md-nav__link">
+        Admin Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nightscout/pushover/" class="md-nav__link">
+        Remote Notifications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Update
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Update" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Update
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update/update/" class="md-nav__link">
+        Updating your site
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update/redeploy/" class="md-nav__link">
+        Redeploying
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update/dev_branch/" class="md-nav__link">
+        Deploy another GitHub branch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/heroku/hobbyplan/" class="md-nav__link">
+        Heroku Hobby plan upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update/upd_stack/" class="md-nav__link">
+        Heroku Stack Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/heroku/" class="md-nav__link">
+        Heroku Multiple Factor Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update/downgrade/" class="md-nav__link">
+        Heroku Downgrade
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Troubleshoot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Troubleshoot" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Troubleshoot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../railway/" class="md-nav__link">
+        Railway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MongoDB Atlas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        MongoDB Atlas
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limit-of-one-free-cluster" class="md-nav__link">
+    Limit of one free cluster.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meet-your-connection-string" class="md-nav__link">
+    Meet your connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unable-to-connect-to-mongo" class="md-nav__link">
+    Unable to connect to Mongo
+  </a>
+  
+    <nav class="md-nav" aria-label="Unable to connect to Mongo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-paused" class="md-nav__link">
+    MongoDB paused
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb-in-read-only-mode" class="md-nav__link">
+    MongoDB in read only mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb_uri-missing" class="md-nav__link">
+    MONGODB_URI missing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-unable-to-connect-to-mongo" class="md-nav__link">
+    Generic Unable to connect to Mongo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bad-connection-string" class="md-nav__link">
+    Bad connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recover-your-connection-string" class="md-nav__link">
+    Recover your connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-your-atlas-database-password" class="md-nav__link">
+    Change your Atlas database password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-full" class="md-nav__link">
+    Database full
+  </a>
+  
+    <nav class="md-nav" aria-label="Database full">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atlas-database-size-verification" class="md-nav__link">
+    Atlas database size verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-cleanup" class="md-nav__link">
+    Normal cleanup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-cleanup" class="md-nav__link">
+    Emergency cleanup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports-slow-loading-or-timeout" class="md-nav__link">
+    Reports slow loading or timeout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-in-the-future" class="md-nav__link">
+    Data in the future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dexcom_bridge/" class="md-nav__link">
+        Dexcom bridge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cleanup/" class="md-nav__link">
+        Cleanup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../translate/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limit-of-one-free-cluster" class="md-nav__link">
+    Limit of one free cluster.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meet-your-connection-string" class="md-nav__link">
+    Meet your connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unable-to-connect-to-mongo" class="md-nav__link">
+    Unable to connect to Mongo
+  </a>
+  
+    <nav class="md-nav" aria-label="Unable to connect to Mongo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-paused" class="md-nav__link">
+    MongoDB paused
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb-in-read-only-mode" class="md-nav__link">
+    MongoDB in read only mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb_uri-missing" class="md-nav__link">
+    MONGODB_URI missing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-unable-to-connect-to-mongo" class="md-nav__link">
+    Generic Unable to connect to Mongo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bad-connection-string" class="md-nav__link">
+    Bad connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recover-your-connection-string" class="md-nav__link">
+    Recover your connection string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-your-atlas-database-password" class="md-nav__link">
+    Change your Atlas database password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-full" class="md-nav__link">
+    Database full
+  </a>
+  
+    <nav class="md-nav" aria-label="Database full">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atlas-database-size-verification" class="md-nav__link">
+    Atlas database size verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-cleanup" class="md-nav__link">
+    Normal cleanup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-cleanup" class="md-nav__link">
+    Emergency cleanup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports-slow-loading-or-timeout" class="md-nav__link">
+    Reports slow loading or timeout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-in-the-future" class="md-nav__link">
+    Data in the future
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleanup" class="md-nav__link">
+    Cleanup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mongodb-atlas-troubleshooting">MongoDB Atlas Troubleshooting<a class="headerlink" href="#mongodb-atlas-troubleshooting" title="Permanent link">⌁</a></h1>
+<p></br></p>
+<h2 id="limit-of-one-free-cluster">Limit of one free cluster.<a class="headerlink" href="#limit-of-one-free-cluster" title="Permanent link">⌁</a></h2>
+<p>When creating a new site or migrating (usually not the first attempt), when reaching <code>Target Cluster</code>.</p>
+<p><img src="../img/TShoot17.png" style="zoom:80%;" ></p>
+<ul>
+<li>Click the leaf top left in your Atlas account. Look at the <code>Project Name</code> you wanted to use when creating your new cluster, it shouldn't contain a cluster yet (like the example below, I tried to create a new Nightscout site but there is already a cluster inside the project I wanted to use). You can't have two clusters in a free project. Click your <code>Project Name</code>.</li>
+<li>This should not happen in normal conditions. Before deleting a cluster, check it doesn't contain your data!</li>
+</ul>
+<p><img src="../img/TShoot18.png" style="zoom:80%;" ></p>
+<ul>
+<li>Click on <code>Collections</code> in the cluster you selected.</li>
+</ul>
+<p><img src="../img/TShoot19.png" style="zoom:80%;" ></p>
+<ul>
+<li>Click on <code>entries</code></li>
+</ul>
+<p><img src="../img/TShoot20.png" style="zoom:80%;" ></p>
+<ul>
+<li>In the case there is data, like in the example below, <strong>don't use this cluster</strong>. Leave it like this and create a new one.</li>
+</ul>
+<p><img src="../img/TShoot21.png" style="zoom:80%;" ></p>
+<ul>
+<li><strong>If there no data</strong>, you can safely delete it.</li>
+</ul>
+<p><img src="../img/TShoot22.png" style="zoom:80%;" ></p>
+<ul>
+<li>In this cluster you want to delete click <code>...</code> then <code>Terminate</code></li>
+</ul>
+<p><img src="../img/TShoot23.png" style="zoom:80%;" ></p>
+<ul>
+<li>Copy the cluster name to confirm then click <code>Terminate</code></li>
+</ul>
+<p><img src="../img/TShoot24.png" style="zoom:80%;" ></p>
+<ul>
+<li>Wait until the operation completes.</li>
+<li>You can now use this project name to create a new site.</li>
+</ul>
+<p></br></p>
+<h2 id="meet-your-connection-string">Meet your connection string<a class="headerlink" href="#meet-your-connection-string" title="Permanent link">⌁</a></h2>
+<p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../vendors/img/Atlas.png" style="zoom:80%;" /></p>
+<p>For technical details look <a href="https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri">here</a>.</p>
+<p>A typical mLab migrated string will look like this:</p>
+<p><code>mongodb+srv://heroku_0v50k8rf:ddfsjcpfu8fcoj9n6dueabfd5u@cluster0.g03wh.mongodb.net/heroku_0v50k8rf?retryWrites=true&amp;w=majority</code></p>
+<p>A typical new string created with Atlas will look like this:</p>
+<p><code>mongodb+srv://johndoe:V3ry53cr3t@cluster0.a01bc.mongodb.net/myCGMiC?retryWrites=true&amp;w=majority</code></p>
+<ul>
+<li>
+<p>It will start by <code>mongodb+srv://</code> with <code>mongodb</code> a <strong>standard prefix</strong> for a connection string, and <code>+srv</code> adding a security layer.</p>
+</li>
+<li>
+<p>After <code>://</code> you'll find your <strong>database username</strong>, that is not your Atlas account username. In the examples above <code>heroku_0v50k8rf</code> or <code>johndoe</code>.</p>
+</li>
+<li>
+<p>Following the username, a separator <code>:</code> and your <strong>database password</strong> that is not your Atlas account password. In the examples above a typical 26 characters password created automatically with the mLab add-on <code>ddfsjcpfu8fcoj9n6dueabfd5u</code> and a user created password <code>V3ry53cr3t</code>.</p>
+</li>
+<li>
+<p>Following the password, a separator <code>@</code> then the <strong>host name</strong> that was provided by Atlas after you created you cluster. typically it will look like <code>cluster0.</code><em><code>a1b2c3</code></em><code>.mongodb.net</code></p>
+</li>
+<li>
+<p>[Optional] After the host name and the separator <code>/</code> you'll see your Nightscout <strong>database name</strong>. If you migrated from mLab it will be identical to your database username (unless you modified it). If you created your Atlas cluster it will be the one you decided. In the examples above <code>heroku_0v50k8rf</code> or <code>myCGMiC</code>.</p>
+</li>
+<li>
+<p>Another separator <code>?</code> and you'll see two options: <code>retryWrites=true&amp;w=majority</code> </p>
+</li>
+</ul>
+<p></br></p>
+<h2 id="unable-to-connect-to-mongo">Unable to connect to Mongo<a class="headerlink" href="#unable-to-connect-to-mongo" title="Permanent link">⌁</a></h2>
+<p><img src="../img/TShoot54.png" style="zoom:80%;" ></p>
+<p>Common reasons:</p>
+<ul>
+<li>The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).  <a href="../../update/newdatabase/">Attach a new Atlas database</a>.</li>
+<li>Your Atlas connection string is incorrect. Check <a href="#bad-connection-string">here</a>.</li>
+</ul>
+<h3 id="mongodb-paused">MongoDB paused<a class="headerlink" href="#mongodb-paused" title="Permanent link">⌁</a></h3>
+<ul>
+<li>If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select <code>Resume</code> to restart it.<br />
+  Once done, if using Heroku, <a href="../../troubleshoot/heroku/#restart-all-dynos">restart all dynos</a>.</li>
+</ul>
+<p><img src="../img/TShoot53.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>If you see this message</p>
+<p><img src="../img/TShoot06.png" style="zoom:80%;" ></p>
+<ul>
+<li><a href="../../update/update/">Update to latest version</a> and come back after you have a more accurate error message.</li>
+</ul>
+<p></br></p>
+<h2 id="mongodb-in-read-only-mode">MongoDB in read only mode<a class="headerlink" href="#mongodb-in-read-only-mode" title="Permanent link">⌁</a></h2>
+<p>If you see this message:</p>
+<p><img src="../img/TShoot44.png" style="zoom:80%;" ></p>
+<ul>
+<li>Verify your Atlas database is not read only, if migration went well on the first time it should be like this, else click <code>Edit</code></li>
+</ul>
+<p><img src="../img/TShoot15.png" style="zoom:80%;" ></p>
+<ul>
+<li>Change the permissions to <code>Atlas Admin</code> and <code>Update User</code></li>
+</ul>
+<p><img src="../img/TShoot16.png" style="zoom:80%;" ></p>
+<ul>
+<li>Restart all dynos if using Heroku</li>
+</ul>
+<p></br></p>
+<h2 id="mongodb_uri-missing"><code>MONGODB_URI</code> missing<a class="headerlink" href="#mongodb_uri-missing" title="Permanent link">⌁</a></h2>
+<p>If you see this message:</p>
+<p><img src="../img/TShoot45.png" style="zoom:80%;" ></p>
+<ul>
+<li>If you forgot to migrate to Atlas you need to <a href="../../update/newdatabase/">attach a new Atlas database</a>.</li>
+<li>If you know you migrated, and your Nightscout was still functional after November 11th 2020, continue <a href="./#bad-connection-string">below</a> to recover:</li>
+</ul>
+<p></br></p>
+<h2 id="generic-unable-to-connect-to-mongo">Generic Unable to connect to Mongo<a class="headerlink" href="#generic-unable-to-connect-to-mongo" title="Permanent link">⌁</a></h2>
+<p>If you see this message:</p>
+<p><img src="../img/TShoot47.png" style="zoom:80%;" ></p>
+<ul>
+<li>Check you authorized all IPs to access your Atlas database:</li>
+<li>Open your Atlas cluster and select your Nightscout project, then <code>Network access</code></li>
+</ul>
+<p><img src="../img/TShoot48.png" style="zoom:80%;" ></p>
+<ul>
+<li>If you see an IP (in red above) instead of 0.0.0.0/0 click <code>Edit</code> select <code>ALLOW ACCESS FROM ANYWHERE</code> then <code>Confirm</code>.</li>
+</ul>
+<p><img src="../img/TShoot49.png" style="zoom:80%;" ></p>
+<ul>
+<li>Restart all dynos in Heroku</li>
+</ul>
+<p></br></p>
+<h2 id="bad-connection-string">Bad connection string<a class="headerlink" href="#bad-connection-string" title="Permanent link">⌁</a></h2>
+<p>If you see this message:</p>
+<p><img src="../img/TShoot46.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>For Heroku: <a href="../../../vendors/heroku/new_user/#editing-config-vars-in-heroku">Edit your <code>Config Variables</code>.</a></p>
+<p>For Railway: <a href="../../../vendors/railway.app/new_user/#editing-config-vars-in-railway">Go to your <code>Variables</code> page</a>.</p>
+<p></br></p>
+<ul>
+<li>Search for a variable called <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code>. If you find none, go <a href="./#recover-your-connection-string">here</a>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title"> <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code></p>
+<p>There should be at least one and only one of them, not both.</p>
+</div>
+<p>If you migrated from mLab Heroku add-on it is usually <code>MONGO_CONNECTION</code></p>
+<p>if you deployed a brand new Nightscout it should be <code>MONGODB_URI</code></p>
+<ul>
+<li>Verify it is looking like this: </li>
+</ul>
+<p><code>mongodb+srv://atlasusername:atlaspassword@cluster0.zzzzz.mongodb.net/dbname?retryWrites=true&amp;w=majority</code></p>
+<p>Note that your <code>atlasusername</code>, <code>atlaspassword</code> and <code>dbname</code> will be different from the example above.</p>
+<ul>
+<li>Paste the string in the box below:</li>
+</ul>
+<p><input type="text" id="myAtlas" value="Yes here. Delete this and paste it here" size="100">
+</br></p>
+<ul>
+<li>Click the <code>Analyze</code> text below:</li>
+</ul>
+<p><button onclick="Analyze()">-&gt; Analyze</button></p>
+<p style="font-size:20px" id="result">Analysis result will appear here.</p>
+
+<p>If the analysis result doesn't show any error, check below the data is what you actually wanted:</p>
+<p><strong>Database Username:</strong> <p id="myUser">...</p>
+<strong>Database Password:</strong> <p id="myPwd">...</p>
+<strong>Database name:</strong> <p id="mydB">...</p> (No database name is not an error)</p>
+<script>
+var sUser, sdB, sPwd;
+function Analyze()
+{
+
+  var sString = "Your connection string structure looks good.";
+  var bErr = 0;
+
+  var sAtlas = document.getElementById("myAtlas").value;
+
+  var iAS = sAtlas.search(" ");
+  if(iAS!=-1)
+  { 
+    sString = "There should be no space characters in the string. Remove all spaces";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("mongodb://");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "This is not an Atlas connection string: it should start with mongodb+srv://";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<password>");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "You should replace &lt;password&gt; with your actual Atlas database password in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<dbname>");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "You should replace &lt;dbname&gt; with your actual Atlas database name in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "There should be no &lt; characters in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search(">");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "There should be no &gt; characters in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("retryWrites=true");
+  if(iAS==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should end with ?retryWrites=true&w=majority";
+    bErr = 1;
+  }
+
+  var iUsr, iAt, iCol, idB, iQM;
+
+  iUsr = sAtlas.search("://");
+  if(iUsr==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should start by mongodb+srv://";
+    bErr = 1;
+  }
+  else
+  {
+    iUsr = iUsr + 3;
+    sAtlas = sAtlas.substr(iUsr);
+  }
+
+  iAt = sAtlas.search("@");
+  if(iAt==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should contain @ after your password";
+    bErr = 1;
+  };
+
+  iCol = sAtlas.search(":");
+  if(iCol==-1 && !bErr)
+  { 
+    sString = "Your Atlas user and password should be separated by :";
+    bErr = 1;
+  };
+
+  iQm = sAtlas.search("\\?");
+  if(iQm==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should end with ?retryWrites=true&w=majority";
+    bErr = 1;
+  };
+
+  idB = sAtlas.search("net/");
+  if(idB==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should be in the mongodb.net domain";
+    bErr = 1;
+  } else idB = idB + 4;
+
+  if(!bErr)
+  {
+    sUser = sAtlas.substring(0, iCol);
+    sPwd = sAtlas.substring(iCol + 1, iAt);
+    sdB = sAtlas.substring(idB, iQm);
+
+
+    document.getElementById("myUser").innerHTML = sUser;
+    document.getElementById("myPwd").innerHTML = sPwd;
+    document.getElementById("mydB").innerHTML = sdB;
+
+   }
+
+ document.getElementById("result").innerHTML = sString;
+}
+
+</script>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you migrated from Heroku mLab add-on, your database username and database name should be identical.</p>
+</div>
+<p><img src="../img/TShoot41.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>If you've just created a new site, try to use <a href="../../nightscout/stringhelp.html">this help page</a> to verify or recreate it.</p>
+<p></br></p>
+<p>If you're still in trouble continue below:</p>
+<p></br></p>
+<h2 id="recover-your-connection-string">Recover your connection string<a class="headerlink" href="#recover-your-connection-string" title="Permanent link">⌁</a></h2>
+<p>If you've tried several times to deploy or migrate, you might end-up with many useless items in your accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to. Consider <a href="../cleanup/">cleanup</a> before continuing.</p>
+<p></br></p>
+<p>a) Go to your MongDB account. Log in if necessary <a href="https://cloud.mongodb.com/">https://cloud.mongodb.com/</a></p>
+<p>b) Click <code>Connect</code> below your cluster name (in the example below <code>Cluster0</code>, but it might have another name)</p>
+<p><img src="../img/TShoot07.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>c) Click <code>Connect your application</code></p>
+<p><img src="../img/TShoot09.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>d) A new view opens, in  <code>(2) Add your connection string into your application code</code> you will find your MONGODB_URI or MONGO_CONNECTION string.</p>
+<p>Click <code>Copy</code> then <code>Close</code></p>
+<p><img src="../img/TShoot10.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>e) Paste it into a place where you can edit the text (i.e. a Word or a Notepad document).</p>
+<p>Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached <a href="../../../vendors/mongodb/atlas/">step <strong>e)</strong></a>.</p>
+<p>Here’s an example of how the string is built up (<code>myFirstDatabase</code> might not show, this is normal):</p>
+<p><code>mongodb+srv://</code> <code>nightscout</code> <code>:</code><strong><code>&lt;password&gt;</code></strong><code>@cluster0.xxxxx.mongodb.net/</code><strong><code>myFirstDatabase</code></strong><code>?retryWrites=true&amp;w=majority</code></p>
+<p></br></p>
+<p>f) Edit your string in order to replace <code>&lt;password&gt;</code> with your database password.</p>
+<p>g) If you don't remember your Atlas database password (which should not be your mongoDB Atlas account password) invent a new one (only letters and numbers).</p>
+<p>Your string will now look like this: (do not use the same password as the example). Note there are no remaining <code>&lt;</code> and <code>&gt;</code>.<br />
+If you don't see a database name like <code>myFirstDatabase</code> before the question mark, just ignore it.</p>
+<p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority</code></p>
+<p></br></p>
+<p>h) Copy this resulting string above into your Heroku variable <code>MONGODB_URI</code> (new Nightscout) or <code>MONGO_CONNECTION</code> (migration). There must be only one of these variables, not both.<br />
+Open <a href="../../../vendors/heroku/new_user/#editing-config-vars-in-heroku">this link for Heroku</a> or <a href="../../../vendors/railway.app/new_user/#editing-config-vars-in-railway">this link for Railway</a> in another tab to see how to edit your Heroku variables.</p>
+<p>i) If there is neither one nor the other create a new <code>MONGODB_URI</code> variable and paste the string in the value field.</p>
+<p>j) If you remembered your password restart all dynos in Heroku, and you should be done.</p>
+<p>k) If you changed your password or your Nightscout page still fails to open continue.</p>
+<p></br></p>
+<h2 id="change-your-atlas-database-password">Change your Atlas database password<a class="headerlink" href="#change-your-atlas-database-password" title="Permanent link">⌁</a></h2>
+<ul>
+<li>
+<p>If you changed the password in the string you will need to change it in the database too:</p>
+</li>
+<li>
+<p>Click <code>Database Access</code></p>
+</li>
+</ul>
+<p><img src="../img/TShoot11.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>At the end of the line, click <code>Edit</code></li>
+</ul>
+<p><img src="../img/TShoot08.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>In <code>Password</code> click <code>Edit Password</code></li>
+</ul>
+<p><strong><em>Note:</em></strong> <em>take a look at the top of this view, after <code>Edit User</code> you can see your database user name before <code>@</code>. Check it's matching the one in your connection string.</em> </p>
+<p><img src="../img/TShoot12.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If you forgot your password invent a new one (use only letters and numbers: no special characters) or better: use <code>Autogenerate Secure Password</code> and click <code>Copy</code></li>
+<li>Else make it the same than the one in your Heroku <code>MONGODB_URI</code> connection string variable</li>
+</ul>
+<p><img src="../img/TShoot13.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click <code>Update User</code></li>
+</ul>
+<p><img src="../img/TShoot14.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Make sure the password matches in your connection string Heroku variable <code>MONGODB_URI</code> (new Nightscout) or <code>MONGO_CONNECTION</code> (migration)</li>
+</ul>
+<p></br></p>
+<h2 id="database-full">Database full<a class="headerlink" href="#database-full" title="Permanent link">⌁</a></h2>
+<p>Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying for an M2 or M5 Shared cluster.</p>
+<p><strong>Note:</strong> <em>If you consider paying for a database upgrade, also think about a <a href="/#nightscout-as-a-service">paid hosting service</a>.</em></p>
+<ul>
+<li>Make sure your Nightscout site has <code>Database Size</code> enabled to monitor database capacity. Look <a href="../../nightscout/setup_variables/#dbsize-database-size">here</a> for more information on this plugin.</li>
+</ul>
+<p><img src="../img/TShoot35.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>If your Nightscout page doesn't open after restarting your app and you want to rule out a full database, you can try an emergency cleanup of the less important part of your Nightscout site: <code>devicestatus</code>.</p>
+<h5 id="atlas-database-size-verification">Atlas database size verification<a class="headerlink" href="#atlas-database-size-verification" title="Permanent link">⌁</a></h5>
+<ul>
+<li>Log in <a href="https://account.mongodb.com/account/login">Atlas</a></li>
+<li>Open your Nightscout cluster and select <code>Collections</code></li>
+</ul>
+<p><img src="../img/TShoot32.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click your database name (hidden left). Check the<code>DATABASE SIZE</code> is indeed close to or at the limit then look at these three collections <code>Documents size</code>: <code>devicestatus</code>, <code>entries</code> and <code>treatments</code>.</li>
+</ul>
+<p><img src="../img/TShoot36.png" style="zoom:80%;" ></p>
+<ul>
+<li>Open Nightscout  <a href="../../nightscout/discover/#drawer-menu"><code>Admin tools</code></a>. If your site doesn't open jump to <a href="#emergency-cleanup">Emergency cleanup</a>.</li>
+<li>Depending on the collection you identified above, choose which of the following you want to cleanup:</li>
+</ul>
+<h5 id="normal-cleanup">Normal cleanup<a class="headerlink" href="#normal-cleanup" title="Permanent link">⌁</a></h5>
+<p>You can cleanup (enter the number of days to keep) or delete your devices status:</p>
+<p><img src="../img/TShoot37.png" style="zoom:80%;" ></p>
+<p>Same for <code>Treatments</code>:</p>
+<p><img src="../img/TShoot38.png" style="zoom:80%;" ></p>
+<p>And <code>Glucose entries</code>. If you are reluctant to lose historical data you should consider opting for a paid database solution or <a href="/#nightscout-as-a-service">hosted</a> Nightscout.</p>
+<p><img src="../img/TShoot39.png" style="zoom:80%;" ></p>
+<h5 id="emergency-cleanup">Emergency cleanup<a class="headerlink" href="#emergency-cleanup" title="Permanent link">⌁</a></h5>
+<p>In the Atlas cluster view you opened <a href="#atlas-database-size-verification">above</a>, select the <code>devicestatus</code> collection and click the bin icon to delete it.<br />
+You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.</p>
+<p><img src="../img/TShoot55.png" style="zoom:80%;" ></p>
+<p>Write <code>devicestatus</code> in the box then click <code>Drop</code></p>
+<p><img src="../img/TShoot56.png" style="zoom:80%;" ></p>
+<p>Restart your site and when it opens, consider <a href="#cleanup">cleanup</a> from Admin Tools if your database size exceeds 80%.</p>
+<p></br></p>
+<h2 id="reports-slow-loading-or-timeout">Reports slow loading or timeout<a class="headerlink" href="#reports-slow-loading-or-timeout" title="Permanent link">⌁</a></h2>
+<p>Loopers might experience Nightscout taking an extremely long time or even timing out when creating reports due to the profiles collection database growing too big.</p>
+<p>Two solutions are available:</p>
+<ol>
+<li>Follow this video (set it full screen in 720p) to selectively delete profiles <a href="https://www.youtube.com/watch?v=iipp0MfPKNQ">https://www.youtube.com/watch?v=iipp0MfPKNQ</a></li>
+<li>Delete all profiles in Atlas</li>
+</ol>
+<p>Log in to Atlas <a href="https://account.mongodb.com/account/login">https://account.mongodb.com/account/login</a></p>
+<p>Select your cluster then <code>COLLECTIONS</code></p>
+<p><img src="../img/TShoot50.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Select the <code>profile</code> collection and click the bin icon to delete all profiles.</p>
+<p><img src="../img/TShoot51.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Write <code>profile</code> in the box then click <code>Drop</code></p>
+<p><img src="../img/TShoot52.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Open your Nightscout and create a new profile (mind the time zone!), authenticate and save it.</p>
+<p>If you are using Loop, temporarily change a basal rate in Loop, and confirm your profiles now show up in Nightscout.</p>
+<p></br></p>
+<h2 id="data-in-the-future">Data in the future<a class="headerlink" href="#data-in-the-future" title="Permanent link">⌁</a></h2>
+<ul>
+<li>
+<p>Check in <a href="https://account.mongodb.com/account/login">Atlas</a></p>
+</li>
+<li>
+<p>Open your Nightscout cluster and select <code>Collections</code></p>
+</li>
+</ul>
+<p><img src="../img/TShoot32.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>In <code>Entries</code> type <code>{date:-1}</code> and click <code>Find</code></li>
+</ul>
+<p><img src="../img/TShoot33.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Delete the entries in the future (manually) with the bin icon</li>
+</ul>
+<p><img src="../img/TShoot34.png" style="zoom:80%;" ></p>
+<p></br></p>
+<h2 id="cleanup">Cleanup<a class="headerlink" href="#cleanup" title="Permanent link">⌁</a></h2>
+<p>It is very easy to get lost in Atlas.</p>
+<p>The structure from top to bottom is: Organization, Projects and Databases. You can have several organizations, each of them several projects and each of them several databases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are deploying a brand new Nightscout make sure you have one organization, one project and one cluster created. No more no less.</p>
+</div>
+<p>If you want to cleanup Atlas, unless you don't have data, you must first find out which database contains your data. For this, start from <code>View All Organizations</code>:</p>
+<p><img src="../img/Cleanup03.png" style="zoom:80%;" ></p>
+<p>You can delete empty organizations (those without any project inside).</p>
+<p><img src="../img/Cleanup04.png" style="zoom:80%;" ></p>
+<p>Select the organization, then top left the cog wheel to go in <code>Settings</code>, then scroll down to <code>Delete Organization</code>: <code>Delete</code>.</p>
+<p><img src="../img/Cleanup06.png" style="zoom:80%;" ></p>
+<p>If an organization is connected to mLab delete it only if you don't want to migrate the database or if you're done it with another organization. Deleting an organization without projects will not delete your data. </p>
+<p><img src="../img/Cleanup05.png" style="zoom:80%;" ></p>
+<hr />
+<p>Once inside an organization, you will see its projects. You can safely delete projects without clusters.</p>
+<p><img src="../img/Cleanup07.png" style="zoom:80%;" ></p>
+<p>Deleting an empty project doesn't delete your Nightscout data.</p>
+<p><img src="../img/Cleanup08.png" style="zoom:80%;" ></p>
+<p>For non-empty projects continue reading before deciding to delete them.</p>
+<hr />
+<p>You can then move to your project (select it) and check its database(s) selecting <code>COLLECTIONS</code></p>
+<p><img src="../img/Cleanup09.png" style="zoom:80%;" ></p>
+<p>An empty project will look like below, and this is typically what you have before deploying Nightscout in Heroku. Once Nightscout is deployed in a project, a new database will be created there.</p>
+<p><img src="../img/Cleanup10.png" style="zoom:80%;" ></p>
+<p>The database currently used by your Nightscout is the one specified in the connection string, in the example below <code>dbname</code>. Whenever you change the database name in the connection string, a new database will be created in your project.</p>
+<p><code>mongodb+srv://atlasusername:atlaspassword@cluster0.zzzzz.mongodb.net/</code><strong><code>dbname</code></strong><code>?retryWrites=true&amp;w=majority</code></p>
+<p>There is usually one database for Nightscout, if there are several, select one and then the other(s) to understand which one contains your data. For this, select <code>entries</code>.</p>
+<p><img src="../img/Cleanup11.png" style="zoom:80%;" ></p>
+<p>A large database is most probably one you want to keep.</p>
+<p><img src="../img/Cleanup12.png" style="zoom:80%;" ></p>
+<p>You can safely delete empty databases (check the size first).</p>
+<p><img src="../img/Cleanup13.png" style="zoom:80%;" ></p>
+<div class="admonition warning">
+<p class="admonition-title">If you're not sure you're deleting the right database, just leave it.</p>
+</div>
+<p>Hover on the database name and click the bin icon. Confirm deletion by copying the database name and click <code>Drop</code>.</p>
+<p><img src="../img/Cleanup14.png" style="zoom:80%;" ></p>
+<p>If your database gets recreated after you deleted it this means you MONGODB_URI or MONGO_CONNECTION string is pointing to it.</p>
+<p></br></p>
+<p><span style="font-size:larger;">If you want to delete a non-empty Project you need to terminate all clusters belonging to it.</span></span></p>
+<p><img src="../img/Cleanup15.png" style="zoom:80%;" ></p>
+<div class="admonition warning">
+<p class="admonition-title">Terminating a cluster will delete all information and databases in this cluster!</p>
+</div>
+<p>Confirm with your cluster name and wait until shutdown is complete.</p>
+<p><img src="../img/Cleanup16.png" style="zoom:80%;" ></p>
+<p>You can then delete the empty project.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../railway/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Railway" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Railway
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../dexcom_bridge/" class="md-footer__link md-footer__link--next" aria-label="Next: Dexcom bridge" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Dexcom bridge
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>

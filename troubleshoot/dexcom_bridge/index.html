@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../troublehoot/" class="md-tabs__link md-tabs__link--active">
+      <a href="../troubleshoot/" class="md-tabs__link md-tabs__link--active">
         Troubleshoot
       </a>
     </li>
@@ -933,20 +933,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/newdatabase/" class="md-nav__link">
-        Attach a new Atlas database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../vendors/heroku/hobbyplan/" class="md-nav__link">
         Heroku Hobby plan upgrade
       </a>
@@ -1039,8 +1025,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../troublehoot/" class="md-nav__link">
+      <a href="../troubleshoot/" class="md-nav__link">
         Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../railway/" class="md-nav__link">
+        Railway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atlas/" class="md-nav__link">
+        MongoDB Atlas
       </a>
     </li>
   
@@ -1115,24 +1157,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dexcom-share" class="md-nav__link">
+    Dexcom Share
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom Share">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-your-configuration" class="md-nav__link">
+    Verify your configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify your configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    Authentication errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-username-issue" class="md-nav__link">
+    Dexcom username issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../connection_string/" class="md-nav__link">
-        Connection failure
-      </a>
     </li>
   
 
@@ -1228,6 +1296,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dexcom-share" class="md-nav__link">
+    Dexcom Share
+  </a>
+  
+    <nav class="md-nav" aria-label="Dexcom Share">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verify-your-configuration" class="md-nav__link">
+    Verify your configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Verify your configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    Authentication errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-username-issue" class="md-nav__link">
+    Dexcom username issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1287,7 +1395,49 @@ For all others: <a href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/<
 <li>Sugarmate, Happy Bob, xDrip+,...</li>
 <li>...</li>
 </ul>
-<p>You can identify an account lock browsing your Heroku logs as described <a href="../troublehoot/#authentication-errors">here</a>.</p>
+<p>Heroku: You can identify an account lock browsing your <a href="#authentication-errors">Heroku logs</a>.<br />
+Railway: </p>
+<p></br></p>
+<h2 id="dexcom-share">Dexcom Share<a class="headerlink" href="#dexcom-share" title="Permanent link">⌁</a></h2>
+<p>Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.</p>
+<p><img src="../../nightscout/img/sharing.jpg" width="250"></p>
+<p></br></p>
+<p>If you are using a Dexcom system, and your data is not appearing in Nightscout, there are only a limited number of reasons for that. You should check your (1) Heroku settings and (2) Dexcom Share.</p>
+<p>NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom.</p>
+<h4 id="verify-your-configuration">Verify your configuration<a class="headerlink" href="#verify-your-configuration" title="Permanent link">⌁</a></h4>
+<p>For Heroku: <a href="../../../vendors/heroku/new_user/#editing-config-vars-in-heroku">Edit your <code>Config Variables</code>.</a></p>
+<p>For Railway: <a href="../../../vendors/railway.app/new_user/#editing-config-vars-in-railway">Go to your <code>Variables</code> page</a>.</p>
+<ol>
+<li>You must use the same <code>BRIDGE_PASSWORD</code> or <code>BRIDGE_USER_NAME</code> that your Dexcom mobile app is using.</li>
+<li>You must have <code>bridge</code> and <code>careportal</code> on the <code>ENABLE</code> line (you can have other values there...but don't forget these two).</li>
+<li>If you are outside the USA, you must add <code>BRIDGE_SERVER</code> set to <code>EU</code> in Heroku settings.</li>
+<li>Your <code>careportal</code> must be one word in the <code>ENABLE</code> line, sometimes autocorrect makes it two words.</li>
+<li>If using <code>mmol</code>, make sure you have spelled that value correctly in the <code>DISPLAY_UNITS</code>.</li>
+</ol>
+<p></br></p>
+<h5 id="authentication-errors">Authentication errors<a class="headerlink" href="#authentication-errors" title="Permanent link">⌁</a></h5>
+<p>One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout <code>BRIDGE</code> settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...<br />
+Check your Heroku logs that are viewable by selecting <code>View Logs</code> from the drop-down menu underneath the <code>More</code> option.  </p>
+<p><img src="../../../vendors/heroku/img/heroku-logs.png"></p>
+<p>With Railway they are available selecting your app, then <code>Deployments</code> and <code>View Logs</code> at the end of the top (last) deployment line.</p>
+<p><img src="../../../vendors/railway.app/img/railway-logs.png"></p>
+<p></br></p>
+<p>Do your logs have "<code>SSO authentication errors</code>" like in the red box highlighted above? If you do, then:</p>
+<ol>
+<li>Delete your <code>BRIDGE</code> entries within Heroku settings.  Don't delete the variables, just delete the values of <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code>.</li>
+<li>Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.</li>
+</ol>
+<p>When you change these variables, Heroku restarts Nightscout. So now everything should work.</p>
+<div class="admonition info">
+<p class="admonition-title">About your Bridge password and user name</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.</p>
+</div>
+<h3 id="dexcom-username-issue">Dexcom username issue<a class="headerlink" href="#dexcom-username-issue" title="Permanent link">⌁</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use <code>bridge</code> with an email address, make sure you <a href="../../update/update/">update Nightscout to the latest release</a>.</p>
+</div>
+<p></br></p>
                 
               
               
@@ -1312,7 +1462,7 @@ For all others: <a href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/<
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../troublehoot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting" rel="prev">
+        <a href="../atlas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MongoDB Atlas" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1321,20 +1471,20 @@ For all others: <a href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/<
               <span class="md-footer__direction">
                 Previous
               </span>
-              Troubleshooting
+              MongoDB Atlas
             </div>
           </div>
         </a>
       
       
         
-        <a href="../connection_string/" class="md-footer__link md-footer__link--next" aria-label="Next: Connection failure" rel="next">
+        <a href="../cleanup/" class="md-footer__link md-footer__link--next" aria-label="Next: Cleanup" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Connection failure
+              Cleanup
             </div>
           </div>
           <div class="md-footer__button md-icon">

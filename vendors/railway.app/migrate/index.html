@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../troubleshoot/troublehoot/" class="md-tabs__link">
+      <a href="../../../troubleshoot/troubleshoot/" class="md-tabs__link">
         Troubleshoot
       </a>
     </li>
@@ -548,13 +548,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-config-vars-in-railway" class="md-nav__link">
-    Editing Config Vars in Railway
-  </a>
   
 </li>
       
@@ -1025,20 +1018,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../update/newdatabase/" class="md-nav__link">
-        Attach a new Atlas database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../heroku/hobbyplan/" class="md-nav__link">
         Heroku Hobby plan upgrade
       </a>
@@ -1129,8 +1108,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshoot/troublehoot/" class="md-nav__link">
+      <a href="../../../troubleshoot/troubleshoot/" class="md-nav__link">
         Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshoot/github/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshoot/heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshoot/railway/" class="md-nav__link">
+        Railway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshoot/atlas/" class="md-nav__link">
+        MongoDB Atlas
       </a>
     </li>
   
@@ -1145,20 +1180,6 @@
     <li class="md-nav__item">
       <a href="../../../troubleshoot/dexcom_bridge/" class="md-nav__link">
         Dexcom bridge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../troubleshoot/connection_string/" class="md-nav__link">
-        Connection failure
       </a>
     </li>
   
@@ -1275,13 +1296,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#editing-config-vars-in-railway" class="md-nav__link">
-    Editing Config Vars in Railway
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1304,12 +1318,12 @@
 <p><a href="https://railway.app/">Railway.app</a> offers 500 free hours of execution usage per month for the <a href="https://docs.railway.app/reference/plans#starter-plan">Starter plan</a> <strong>this is not enough to cover a full month</strong>.  </p>
 </div>
 <p><img src="../img/RailwayFree.png" style="zoom:80%;" /></p>
-<p>Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
 <p></br></p>
 <p>Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.<br />
 If your site stops after 500 hours with more than 1.56$ credit, this mean <strong>you probably can use Railway for free subscribing to a Developer plan</strong>.<br />
 If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).</p>
 <p><img src="../img/RailwayDev.png" style="zoom:80%;" /></p>
+<p>Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
 <p></br></p>
 <h2 id="set-up-new-nightscout">Set up new Nightscout<a class="headerlink" href="#set-up-new-nightscout" title="Permanent link">⌁</a></h2>
 <h3 id="create-your-railway-mongodb-atlas-and-github-accounts-from-a-computer">Create your Railway, MongoDB Atlas and GitHub accounts from a computer.<a class="headerlink" href="#create-your-railway-mongodb-atlas-and-github-accounts-from-a-computer" title="Permanent link">⌁</a></h3>
@@ -1471,29 +1485,6 @@ Click on the link to open it.</p>
 <p></br></p>
 <p>s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
 <p><img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" /></p>
-<p></br></p>
-<h2 id="editing-config-vars-in-railway">Editing Config Vars in Railway<a class="headerlink" href="#editing-config-vars-in-railway" title="Permanent link">⌁</a></h2>
-<p></br></p>
-<p>a) Open <a href="https://railway.app">Railway</a> and click <code>login</code>. Login with GitHub.</p>
-<p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
-<p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>b) Select your Nightscout project.</p>
-<p><img src="../img/RailwayM15.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>c) Select your web app.</p>
-<p><img src="../img/RailwayM16.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>d) Click on <code>Variables</code>.</p>
-<p><img src="../img/RailwayM17.png" style="zoom:80%;" /></p>
-<p></br></p>
-<p>e) You can perform various operations on your variables:</p>
-<ol>
-<li>Add a new variable with <code>+ New Variable</code></li>
-<li>View the variable value with <code>Show Value</code></li>
-<li>Edit or delete the variable or its value with the line end menu</li>
-</ol>
-<p><img src="../img/RailwayM18.png" style="zoom:80%;" /></p>
                 
               
               

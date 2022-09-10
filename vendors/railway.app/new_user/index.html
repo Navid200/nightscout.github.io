@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#railway-nightscout" class="md-skip">
+        <a href="#railwayapp-nightscout" class="md-skip">
           Skip to content
         </a>
       
@@ -519,9 +519,56 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-deploy-cgm-remote-monitor" class="md-nav__link">
-    Step 3: Deploy cgm-remote-monitor
+  <a href="#step-3-create-your-database" class="md-nav__link">
+    Step 3: Create your database
   </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Create your database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-can-reuse-your-existing-mongdb-atlas-database" class="md-nav__link">
+    You can reuse your existing MongDB Atlas database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-create-a-new-mongodb-atlas-database" class="md-nav__link">
+    You can create a new MongoDB Atlas database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-create-a-new-railway-mongo-database" class="md-nav__link">
+    You can create a new Railway Mongo database.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-deploy-cgm-remote-monitor" class="md-nav__link">
+    Step 4: Deploy cgm-remote-monitor
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Deploy cgm-remote-monitor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-bridge" class="md-nav__link">
+    Dexcom Bridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -541,20 +588,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../migrate/" class="md-nav__link">
-        Railway.app with Atlas
-      </a>
     </li>
   
 
@@ -1278,9 +1311,56 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-deploy-cgm-remote-monitor" class="md-nav__link">
-    Step 3: Deploy cgm-remote-monitor
+  <a href="#step-3-create-your-database" class="md-nav__link">
+    Step 3: Create your database
   </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Create your database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-can-reuse-your-existing-mongdb-atlas-database" class="md-nav__link">
+    You can reuse your existing MongDB Atlas database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-create-a-new-mongodb-atlas-database" class="md-nav__link">
+    You can create a new MongoDB Atlas database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-create-a-new-railway-mongo-database" class="md-nav__link">
+    You can create a new Railway Mongo database.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-deploy-cgm-remote-monitor" class="md-nav__link">
+    Step 4: Deploy cgm-remote-monitor
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Deploy cgm-remote-monitor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dexcom-bridge" class="md-nav__link">
+    Dexcom Bridge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1309,29 +1389,31 @@
               
                 
                 
-                <h1 id="railway-nightscout">Railway Nightscout<a class="headerlink" href="#railway-nightscout" title="Permanent link">⌁</a></h1>
+                <h1 id="railwayapp-nightscout">Railway.app Nightscout<a class="headerlink" href="#railwayapp-nightscout" title="Permanent link">⌁</a></h1>
 <hr />
 <p><span style="font-size:smaller;"><strong>APPLIES TO:</strong></span> <img src="../../img/railway-app-logo.png" style="zoom:80%;" /></p>
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Cost</p>
-<p><a href="https://railway.app/">Railway.app</a> offers 500 free hours of execution usage per month for the <a href="https://docs.railway.app/reference/plans#starter-plan">Starter plan</a> <strong>this is not enough to cover a full month</strong>.  </p>
+<p><a href="https://railway.app/">Railway.app</a> offers 500 free hours of execution usage per month for the <a href="https://docs.railway.app/reference/plans#starter-plan">Starter plan</a> <strong>this is not enough to cover a full month</strong>.<br />
+<img src="../img/RailwayFree.png" style="zoom:80%;" /><br />
+Adding a database to your Railway account might increase costs.<br />
+Running multiple free accounts to override this limitation is <a href="https://railway.app/legal/fair-use">not acceptable</a>.</p>
 </div>
-<p><img src="../img/RailwayFree.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.<br />
-If your site stops after 500 hours with more than 1.56$ credit, this mean <strong>you probably can use Railway for free subscribing to a Developer plan</strong>.<br />
+<p>Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean <strong>you probably can use Railway for free subscribing to a <a href="https://railway.app/pricing">Developer plan</a></strong>.<br />
+The Developer plan offers Max 100 GB of Disk (Soft cap) which is more than enough. But this offer might change over the years.<br />
 If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).</p>
 <p><img src="../img/RailwayDev.png" style="zoom:80%;" /></p>
 <p>Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
 <p></br></p>
 <h2 id="set-up-new-nightscout">Set up new Nightscout<a class="headerlink" href="#set-up-new-nightscout" title="Permanent link">⌁</a></h2>
 <h3 id="create-your-railway-and-github-accounts-from-a-computer">Create your Railway and GitHub accounts from a computer.<a class="headerlink" href="#create-your-railway-and-github-accounts-from-a-computer" title="Permanent link">⌁</a></h3>
-<p>Do not change device/computer/browser during the setup process!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Do not change device/computer/browser during the setup process!<br />
+If you have unexpected issues when creating your site, restart with another browser.</p>
 </div>
-<p>If you have unexpected issues when creating your site, restart with another browser.</p>
 <p></br></p>
 <h3 id="step-1-create-a-github-account">Step 1: Create a GitHub account<a class="headerlink" href="#step-1-create-a-github-account" title="Permanent link">⌁</a></h3>
 <p></br></p>
@@ -1358,79 +1440,167 @@ If you are reluctant to leave a billing method to Railway, you can opt for a one
 <p>e) Scroll down and click <code>I will not deploy any of that</code>.</p>
 <p><img src="../img/Railway05.png" style="zoom:60%;" /></p>
 <p></br></p>
-<p>f) You should now see this. You've created your Railway account,</p>
+<p>f) You should now see this. You've created your Railway account.<br />
+If it still shows 200 hours, refresh your browser page.</p>
 <p><img src="../img/Railway06a.png" style="zoom:80%;" /></p>
 <p></br></p>
-<h3 id="step-3-deploy-cgm-remote-monitor">Step 3: Deploy cgm-remote-monitor<a class="headerlink" href="#step-3-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h3>
+<h3 id="step-3-create-your-database">Step 3: Create your database<a class="headerlink" href="#step-3-create-your-database" title="Permanent link">⌁</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Already have a database?</p>
+<p>If you're migrating from another platform and you already have database connection string from another Nightsout deployment, just copy the <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code> string and keep your data!</p>
+</div>
+<p>You have several choices.</p>
+<ul>
+<li>
+<h4 id="you-can-reuse-your-existing-mongdb-atlas-database">You can reuse your existing MongDB Atlas database.<a class="headerlink" href="#you-can-reuse-your-existing-mongdb-atlas-database" title="Permanent link">⌁</a></h4>
+</li>
+</ul>
+<p>Migrating from Heroku? <a href="../../heroku/new_user#editing-config-vars-in-heroku">Edit your Heroku site variables</a> and copy the <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code> variable.<br />
+    Lost your string? <a href="../../../troubleshoot/atlas/#recover-your-connection-string">Recover it</a> from MongoDB Atlas.</p>
+<ul>
+<li>
+<h4 id="you-can-create-a-new-mongodb-atlas-database">You can create a new MongoDB Atlas database.<a class="headerlink" href="#you-can-create-a-new-mongodb-atlas-database" title="Permanent link">⌁</a></h4>
+</li>
+</ul>
+<p>To create a new MongoDB database follow <a href="../../mongodb/atlas/#create-an-atlas-database">these instructions</a> and come back with your <code>MONGODB_URI</code> connection string.<br />
+The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.</p>
+<ul>
+<li>
+<h4 id="you-can-create-a-new-railway-mongo-database">You can create a new Railway Mongo database.<a class="headerlink" href="#you-can-create-a-new-railway-mongo-database" title="Permanent link">⌁</a></h4>
+</li>
+</ul>
+<p>a) Click <code>New Project</code> from your Dashboard screen (top right).</p>
+<p><img src="../../../vendors/railway.app/img/RailwayDB01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>b) Click  <code>Provision MongoDB</code></p>
+<p><img src="../../../vendors/railway.app/img/RailwayDB02.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>c) Select your new MongoDB project.</p>
+<p><img src="../../../vendors/railway.app/img/RailwayDB03.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>d) Go to the <code>Connect</code> page.</p>
+<p><img src="../../../vendors/railway.app/img/RailwayDB04.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>e) Move the mouse to the end of the line showing the <code>Mongo Connection URL</code> and click the copy icon.</p>
+<p><img src="../../../vendors/railway.app/img/RailwayDB05.png" style="zoom:80%;" /></p>
+<p></br></p>
+<div class="admonition warning">
+<p class="admonition-title">This is an important information</p>
+</div>
+<p>Now that you have <strong>copied</strong> the resulting <code>MONGODB_URI</code> string, keep it in a <strong>safe place</strong>, you will need it later.</p>
+<p></br></p>
+<h3 id="step-4-deploy-cgm-remote-monitor">Step 4: Deploy cgm-remote-monitor<a class="headerlink" href="#step-4-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h3>
 <p></br></p>
 <p>a) Click on the <code>Deploy on Railway</code> button below:</p>
-<p><img alt="Deploy on Railway" src="https://railway.app/button.svg" /></p>
+<p><a href="https://railway.app/new/template/6v8Ejj"><img alt="Deploy on Railway" src="https://railway.app/button.svg" /></a></p>
+<p><em>Note: this is a temporary template until the community finds a way to get it owned by Nightscout and not only a single user.<br />
+It doesn't include any referral code.</em></p>
 <p></br></p>
-<p>b) Click <code>Configure</code></p>
+<p>b) If you see this screen, select <code>Connect GitHub to Deploy</code>.</p>
+<p><img src="../img/Railway07a.png" style="zoom:80%;" /></p>
+<p>Then select <code>Authorize Railway App</code>.</p>
+<p><img src="../img/Railway02.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>c) Click <code>Configure</code></p>
 <p><img src="../img/Railway07.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>c) Click <code>Install &amp; Authorize</code></p>
-<p><img src="../img/Railway08.png" style="zoom:80%;" /></p>
+<p>d) Click <code>Install &amp; Authorize</code></p>
+<p><img src="../img/Railway08a.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>d) You will then see this page, scroll down to define the <a href="../../../nightscout/setup_variables/#required-variables">required variables</a> for creating your Nightscout site.</p>
+<p>e) You will then see this page, scroll down to define the <a href="../../../nightscout/setup_variables/#required-variables">required variables</a> for creating your Nightscout site.</p>
 <p><img src="../img/Railway09.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>e) Mind if you see this you will need to <a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">delete the<code>cgm-remote-monitor</code> fork in GitHub</a> and retry <code>Deploy</code> afterwards.</p>
+<p>f) Mind if you see this you will need to <a href="../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor">delete the<code>cgm-remote-monitor</code> fork in GitHub</a> and retry <code>Deploy</code> from <strong>a)</strong> afterwards.</p>
 <p><img src="../img/Railway17.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>f) Setup your Nightscout core variables.</p>
+<p>g) Setup your Nightscout core variables.</p>
+<div class="admonition note">
+<p class="admonition-title">Migrating from Heroku</p>
+<p>If you're migrating your project from Heroku, <a href="../../heroku/new_user/#editing-config-vars-in-heroku">display all variables in Heroku</a> and copy all those with a value into Railway.<br />
+See below how to add variables in Railway but use your Heroku values.</p>
+</div>
 <p><code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use @ or ! symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
 <div class="admonition warning">
 <p class="admonition-title">The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
 </div>
 <p><img src="../img/Railway10.png" style="zoom:80%;" /></p>
-<p>Leave MONGODB_URI blank for now.</p>
+<p>h) At <strong>Step 3</strong> you created your database and came back with a MONGODB_URI string. Time has come to use it here.  </p>
 <p><img src="../img/Railway21.png" style="zoom:80%;" /></p>
-<p>Three optional variables are already setup for you, open the caret to see them (recommended).</p>
+<p></br></p>
+<h5 id="dexcom-bridge">Dexcom Bridge<a class="headerlink" href="#dexcom-bridge" title="Permanent link">⌁</a></h5>
+<p>i) If you use <a href="../../../troubleshoot/dexcom_bridge/">Dexcom <code>bridge</code></a> you need to configure these two variables with your Dexcom credentials:</p>
+<p><img src="../img/Railway33.png" style="zoom:80%;" /></p>
+<p><img src="../img/Railway34.png" style="zoom:80%;" /></p>
+<p>If you're using Dexcom Share in the US you should put <strong>US</strong>, in <strong>any other case it must be EU</strong>.<br />
+If you don't see it proposed at this point you'll need to <strong>browse the list below to find it and modify it</strong>.</p>
+<p><img src="../img/Railway36.png" style="zoom:80%;" /></p>
+<p><strong>Remember to add <code>bridge</code> at the end of the <code>enable</code> variable in the list below.</strong></p>
+<div class="admonition info">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See <a href="../../../troubleshoot/dexcom_bridge/">here</a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You need to have at least one follower to use Dexcom Share. See <a href="../../../uploader/setup/#dexcom">here</a>.</p>
+</div>
+<p></br></p>
+<p>j) Many optional variables are already setup for you, open the caret to see them and eventually modify them (<strong>recommended</strong>).</p>
 <p><img src="../img/Railway15.png" style="zoom:80%;" /></p>
-<p>If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the <code>API_SECRET</code>) is able to view the data, you should configure the <a href="../setup_variables/#auth_default_roles"><code>AUTH_DEFAULT_ROLES</code></a> variable in as <code>denied</code>.<br />
-If you want your site to be visible to anybody set it as <code>readable</code>.</p>
-<p><img src="../img/Railway11.png" style="zoom:80%;" /></p>
-<p>A common list of <a href="../../../nightscout/setup_variables/#enable"><code>enable</code></a> variables is predefined, you can change them if you know why.<br />
-It's recommended that you leave them like this for now.</p>
-<p><img src="../img/Railway14.png" style="zoom:80%;" /></p>
-<p>Select the units you’re using in <code>DISPLAY_UNITS</code> acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>).</p>
+<p></br></p>
+<p>k) Select the units you’re using in <code>DISPLAY_UNITS</code> acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>).</p>
 <p><img src="../img/Railway13.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>g) You can now <code>Deploy</code>, and wait until it is complete.</p>
+<p>l) You can update the alarms values. See <a href="../../../nightscout/setup_variables/#alarms">here</a> for the meaning of each one.</p>
+<p><img src="../img/Railway37.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>m) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the <code>API_SECRET</code>) is able to view the data, you should configure the <a href="../setup_variables/#auth_default_roles"><code>AUTH_DEFAULT_ROLES</code></a> variable in as <code>denied</code>.<br />
+If you want your site to be visible to anybody leave it as <code>readable</code>.</p>
+<p><img src="../img/Railway11.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>n) A common list of <a href="../../../nightscout/setup_variables/#enable"><code>enable</code></a> variables is predefined, you can change them if you know why.<br />
+It's recommended that you leave them like this for now.</p>
+<p>Just remember to add <code>bridge</code> at the end if your get your BG values from Dexcom Share.</p>
+<p><img src="../img/Railway14.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>o) You can modify the variables values, check the <a href="../../../nightscout/setup_variables">documentation</a> for the meaning of each one.<br />
+Make sure you don't make typo errors, some will crash your site (like for example <code>LANGUAGE</code> value in upercase).</p>
+<p></br></p>
+<p>p) You can now <code>Deploy</code>, and wait until it is complete.</p>
 <p><img src="../img/Railway16.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>h) Once your app is deployed, we need to set the MONGODB_URI.</p>
-<p><img src="../img/Railway22.png" style="zoom:80%;" /></p>
+<p>q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.<br />
+Click on the link to open it.</p>
+<p><img src="../img/RailwayM14.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>i) Click the Mongo service, and then click on the connect tab</p>
-<p><img src="../img/Railway23.png" style="zoom:80%;" /></p>
-<p><img src="../img/Railway24.png" style="zoom:80%;" /></p>
+<p>r) Your Nightscout site should open and direct you to a new profile creation.</p>
+<p><img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" /></p>
 <p></br></p>
-<p>j) Copy the connection url</p>
-<p><img src="../img/Railway25.png" style="zoom:80%;" /></p>
+<p>s) Setup your <code>Time zone</code> and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.</p>
+<p><img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>k) Click on the nightscout service and click on the environment tab</p>
-<p><img src="../img/Railway26.png" style="zoom:80%;" />
-<img src="../img/Railway27.png" style="zoom:80%;" /></p>
+<p>t) Browse down to <code>Authentication status</code> and click <code>Authenticate</code>. Enter your API secret. Click <code>Update</code>.</p>
+<p><img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>l) Add a new variable by clicking <code>New Variable</code></p>
-<p><img src="../img/Railway28.png" style="zoom:80%;" /></p>
+<p>u) Click <code>Save</code>.</p>
+<p><img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>m) For the variable name, enter <code>MONGODB_URI</code></p>
-<p><img src="../img/Railway29.png" style="zoom:80%;" /></p>
+<p>v) If the following pop-up shows up click <code>OK</code>, and check status (upper right of the window).</p>
+<p><img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>n) For the variable value, paste the connection url we copied from the mongo service. It will look like this:</p>
-<p><code>mongodb://mongo:secret@containers-us-west-19.railway.app:6450</code></p>
-<p><img src="../img/Railway30.png" style="zoom:80%;" /></p>
+<p>w) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code>Profile Editor</code>.</p>
+<p><img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" /></p>
 <p></br></p>
-<p>o) Click add, and you should now see the MONGODB_URI is set</p>
-<p><img src="../img/Railway31.png" style="zoom:80%;" />
-<img src="../img/Railway32.png" style="zoom:80%;" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Privacy warning</p>
+<p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a href="../../../nightscout/security">security</a> to your site once you're done with the setup.  </p>
+</div>
 <p></br></p>
-<p><strong>Work in progress...</strong></p>
-<p>Now lets deploy nightscout. We can trigger a deployment by modifying our fork, or via the <a href="https://docs.railway.app/develop/cli">railway cli</a> by running <a href="https://docs.railway.app/develop/cli#deploy">railway up</a></p>
-<p></br></p>
+<p>x) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
+<p><img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" /></p>
 <p></br></p>
 <h2 id="editing-variables-in-railway">Editing Variables in Railway<a class="headerlink" href="#editing-variables-in-railway" title="Permanent link">⌁</a></h2>
 <p></br></p>
@@ -1494,13 +1664,13 @@ It's recommended that you leave them like this for now.</p>
       
       
         
-        <a href="../migrate/" class="md-footer__link md-footer__link--next" aria-label="Next: Railway.app with Atlas" rel="next">
+        <a href="../../fly.io/new_user/" class="md-footer__link md-footer__link--next" aria-label="Next: Fly.io" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Railway.app with Atlas
+              Fly.io
             </div>
           </div>
           <div class="md-footer__button md-icon">

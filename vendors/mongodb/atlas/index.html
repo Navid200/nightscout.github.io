@@ -468,6 +468,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#backup-your-database" class="md-nav__link">
+    Backup your database
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup your database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-the-database-tools" class="md-nav__link">
+    Install the database tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump-your-database" class="md-nav__link">
+    Dump your database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1200,6 +1227,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#backup-your-database" class="md-nav__link">
+    Backup your database
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup your database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-the-database-tools" class="md-nav__link">
+    Install the database tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump-your-database" class="md-nav__link">
+    Dump your database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1355,6 +1409,45 @@ function Generate()
 </div>
 <p></br></p>
 <p>Now that you have <strong>copied</strong> the resulting <code>MONGODB_URI</code> string to a <strong>safe place</strong>, go back to the instructions page you were following.</p>
+<p></br></p>
+<p></br></p>
+<h2 id="backup-your-database">Backup your database<a class="headerlink" href="#backup-your-database" title="Permanent link">⌁</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Not a normal operation</p>
+<p>Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.<br />
+This is not an easy operation and requires command line instructions using a computer.</p>
+</div>
+<h4 id="install-the-database-tools">Install the database tools<a class="headerlink" href="#install-the-database-tools" title="Permanent link">⌁</a></h4>
+<p>Follow <a href="https://www.mongodb.com/docs/database-tools/installation/installation/">this link</a> to install the CLI tool on your computer.</p>
+<h4 id="dump-your-database">Dump your database<a class="headerlink" href="#dump-your-database" title="Permanent link">⌁</a></h4>
+<p>Get your <code>MONGODB_URI</code> handy to find the missing pieces (password and database name).</p>
+<p>Log in your MongoDB account <a href="https://cloud.mongodb.com/">https://cloud.mongodb.com/</a>.</p>
+<ol>
+<li>Select your organization</li>
+<li>Select your database</li>
+<li>In the advanced options menu, select <code>Command line tools</code></li>
+</ol>
+<p><img src="../img/AtlasX01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Scroll down to <code>Binary import and Export tools</code>, copy the <code>mongodump</code> command line.</p>
+<p><img src="../img/AtlasX02.png" style="zoom:80%;" /></p>
+<p>Paste the command line in a text editor.</p>
+<p>Look into your <code>MONGODB_URI</code> and replace <code>&lt;PASSWORD&gt;</code> with your database password and entually (if you have one) <code>&lt;DATABASE&gt;</code> with your database name.</p>
+<p><img src="../img/AtlasX03.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path).<br />
+For example in Windows 64bits it's in <code>C:\Program Files\MongoDB\Tools\100\bin</code>.</p>
+<p>Copy and paste your <code>mongodump</code> command, run it.</p>
+<p><img src="../img/AtlasX04.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>You will find the database dump in a subfolder called <code>dump</code> with your database name in a subfolder.</p>
+<div class="admonition note">
+<p class="admonition-title">Database name</p>
+<p>If you will want to import this dump into a default new MongoDB database (not Atlas) rename the database folder name to <code>test</code>.<br />
+Do not change the folder name if this is a MongoDB Atlas backup only.</p>
+</div>
+<p><img src="../img/AtlasX07.png" style="zoom:80%;" /></p>
+<p></br></p>
                 
               
               

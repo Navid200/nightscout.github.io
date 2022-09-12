@@ -578,9 +578,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-your-railway-nightscout-site-name" class="md-nav__link">
+    Change your Railway Nightscout site name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrate-your-mongodb-atlas-database-to-railway" class="md-nav__link">
+    Migrate your MongoDB Atlas database to Railway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#editing-variables-in-railway" class="md-nav__link">
     Editing Variables in Railway
   </a>
+  
+    <nav class="md-nav" aria-label="Editing Variables in Railway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-web-interface" class="md-nav__link">
+    Method 1 - Web interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-raw-editor" class="md-nav__link">
+    Method 2 - Raw Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1370,9 +1404,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-your-railway-nightscout-site-name" class="md-nav__link">
+    Change your Railway Nightscout site name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrate-your-mongodb-atlas-database-to-railway" class="md-nav__link">
+    Migrate your MongoDB Atlas database to Railway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#editing-variables-in-railway" class="md-nav__link">
     Editing Variables in Railway
   </a>
+  
+    <nav class="md-nav" aria-label="Editing Variables in Railway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-web-interface" class="md-nav__link">
+    Method 1 - Web interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-raw-editor" class="md-nav__link">
+    Method 2 - Raw Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1395,16 +1463,17 @@
 <hr />
 <div class="admonition info">
 <p class="admonition-title">Cost</p>
-<p><a href="https://railway.app/">Railway.app</a> offers 500 free hours of execution usage per month for the <a href="https://docs.railway.app/reference/plans#starter-plan">Starter plan</a> <strong>this is not enough to cover a full month</strong>.<br />
+<p><a href="https://railway.app/">Railway.app</a> offers 500 free hours of execution usage per month for the <a href="https://docs.railway.app/reference/plans#starter-plan">Starter plan</a> <strong>this is not enough to cover a full month</strong>. Running multiple free accounts to override this limitation is <a href="https://railway.app/legal/fair-use">not acceptable</a>.<br />
 <img src="../img/RailwayFree.png" style="zoom:80%;" /><br />
-Adding a database to your Railway account might increase costs.<br />
-Running multiple free accounts to override this limitation is <a href="https://railway.app/legal/fair-use">not acceptable</a>.</p>
+<strong>You probably can use Railway for free subscribing to a <a href="https://railway.app/pricing">Developer plan</a></strong>.<br />
+Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean you can run Nightscout for free.  </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Database</p>
+<p>Adding a database to your Railway account might increase costs.<br />
+The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database. </p>
 </div>
 <p></br></p>
-<p>Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean <strong>you probably can use Railway for free subscribing to a <a href="https://railway.app/pricing">Developer plan</a></strong>.<br />
-The Developer plan offers Max 100 GB of Disk (Soft cap) which is more than enough. But this offer might change over the years.<br />
-If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).</p>
-<p><img src="../img/RailwayDev.png" style="zoom:80%;" /></p>
 <p>Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an option.</p>
 <p></br></p>
 <h2 id="set-up-new-nightscout">Set up new Nightscout<a class="headerlink" href="#set-up-new-nightscout" title="Permanent link">⌁</a></h2>
@@ -1444,6 +1513,21 @@ If you have unexpected issues when creating your site, restart with another brow
 If it still shows 200 hours, refresh your browser page.</p>
 <p><img src="../img/Railway06a.png" style="zoom:80%;" /></p>
 <p></br></p>
+<p>g) If you need to use Nightscout for more than 500 hours per month you need to update your account to a Developer plan. Click on the <code>Starter Plan</code> information and select <code>Remove Resource Limits</code>.</p>
+<p><img src="../img/Railway06b.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Enter your credit card information and select <code>Subscribe to a Developer Plan</code>.</p>
+<p><img src="../img/Railway06c.png" style="zoom:80%;" /></p>
+<p>Your card will be billed 1$ that will be refund immediately. Bank fees won't be refund.</p>
+<p></br></p>
+<div class="admonition note">
+<p class="admonition-title">One-off purchase</p>
+<p><img src="../img/Railway06d.png" style="zoom:80%;" /><br />
+<img src="../img/Railway06e.png" style="zoom:80%;" /><br />
+If you are reluctant to leave a billing method to Railway, you can <strong>opt for a one-off 5$ purchase guaranteeing you access to a Developer plan</strong> until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).<br />
+No billing will occur after the initial credits are fully used. They will transfer month to month (<em>note: we need to check for how long they transfer if not used.</em>) </p>
+</div>
+<p></br></p>
 <h3 id="step-3-create-your-database">Step 3: Create your database<a class="headerlink" href="#step-3-create-your-database" title="Permanent link">⌁</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Already have a database?</p>
@@ -1455,6 +1539,10 @@ If it still shows 200 hours, refresh your browser page.</p>
 <h4 id="you-can-reuse-your-existing-mongdb-atlas-database">You can reuse your existing MongDB Atlas database.<a class="headerlink" href="#you-can-reuse-your-existing-mongdb-atlas-database" title="Permanent link">⌁</a></h4>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Costs</p>
+<p>Recommended for Heroku migration.</p>
+</div>
 <p>Migrating from Heroku? <a href="../../heroku/new_user#editing-config-vars-in-heroku">Edit your Heroku site variables</a> and copy the <code>MONGODB_URI</code> or <code>MONGO_CONNECTION</code> variable.<br />
     Lost your string? <a href="../../../troubleshoot/atlas/#recover-your-connection-string">Recover it</a> from MongoDB Atlas.</p>
 <ul>
@@ -1462,6 +1550,10 @@ If it still shows 200 hours, refresh your browser page.</p>
 <h4 id="you-can-create-a-new-mongodb-atlas-database">You can create a new MongoDB Atlas database.<a class="headerlink" href="#you-can-create-a-new-mongodb-atlas-database" title="Permanent link">⌁</a></h4>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Costs</p>
+<p>Recommended for a free Nightscout site.</p>
+</div>
 <p>To create a new MongoDB database follow <a href="../../mongodb/atlas/#create-an-atlas-database">these instructions</a> and come back with your <code>MONGODB_URI</code> connection string.<br />
 The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.</p>
 <ul>
@@ -1469,6 +1561,11 @@ The Atlas database size is limited to 512MB of data and is free to try. This mig
 <h4 id="you-can-create-a-new-railway-mongo-database">You can create a new Railway Mongo database.<a class="headerlink" href="#you-can-create-a-new-railway-mongo-database" title="Permanent link">⌁</a></h4>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Costs</p>
+<p>Adding a Railway Mongo database will not fit forever in 5$ per month.<br />
+If you don't keep its dimension very small (&lt;500MB <em>to be checked</em>) you will most probably be charged for it.</p>
+</div>
 <p>a) Click <code>New Project</code> from your Dashboard screen (top right).</p>
 <p><img src="../../../vendors/railway.app/img/RailwayDB01.png" style="zoom:80%;" /></p>
 <p></br></p>
@@ -1517,7 +1614,7 @@ It doesn't include any referral code.</em></p>
 <div class="admonition note">
 <p class="admonition-title">Migrating from Heroku</p>
 <p>If you're migrating your project from Heroku, <a href="../../heroku/new_user/#editing-config-vars-in-heroku">display all variables in Heroku</a> and copy all those with a value into Railway.<br />
-See below how to add variables in Railway but use your Heroku values.</p>
+See below how to add variables in Railway but use your Heroku variables values.</p>
 </div>
 <p><code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use @ or ! symbols remember you will probably need to express them using <a href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
 <div class="admonition warning">
@@ -1574,6 +1671,10 @@ Make sure you don't make typo errors, some will crash your site (like for exampl
 <p></br></p>
 <p>q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.<br />
 Click on the link to open it.</p>
+<div class="admonition info">
+<p class="admonition-title">Railway site name</p>
+<p>You can <a href="#change-your-railway-nightscout-site-name">change your Railway site name</a> in order to make it easier to remember. <strong>Recommended</strong>. You will do this later, before setting your uploaders.</p>
+</div>
 <p><img src="../img/RailwayM14.png" style="zoom:80%;" /></p>
 <p></br></p>
 <p>r) Your Nightscout site should open and direct you to a new profile creation.</p>
@@ -1602,8 +1703,71 @@ Click on the link to open it.</p>
 <p>x) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</p>
 <p><img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" /></p>
 <p></br></p>
+<h2 id="change-your-railway-nightscout-site-name">Change your Railway Nightscout site name<a class="headerlink" href="#change-your-railway-nightscout-site-name" title="Permanent link">⌁</a></h2>
+<p>Railways automatically makes a name when creating your new site. It is rather difficult to remember.</p>
+<p>You can change the site name but need to keep the <code>.up.railway.app</code> domain.</p>
+<ol>
+<li>
+<p>Select your Nightscout app</p>
+</li>
+<li>
+<p>Go in <code>Settings</code></p>
+</li>
+<li>
+<p>In <code>Domains</code> go to the end of line and click the edit icon</p>
+</li>
+<li>
+<p>Write your new name and check it's available</p>
+</li>
+</ol>
+<p>Click <code>Update</code></p>
+<p>You Nightscout URL will now be <code>https://</code><em>yoursitename</em><code>.up.railway.app</code></p>
+<p><img src="../img/Railway38.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Change all your <a href="../../../uploader/setup/">uploaders</a> and <a href="../../../nightscout/downloaders/">follower</a> devices to reflect the new URL once verified correct functioning of your Nightscout site.</p>
+<p></br></p>
+<h2 id="migrate-your-mongodb-atlas-database-to-railway">Migrate your MongoDB Atlas database to Railway<a class="headerlink" href="#migrate-your-mongodb-atlas-database-to-railway" title="Permanent link">⌁</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Not an easy operation</p>
+<p>This is not an easy operation and requires command line instructions using a computer.<br />
+You can have a trusted person help you perform it, if you can provide both MongoDB Atlas and Railway MongoDB connection strings.</p>
+</div>
+<p>a) Dump your Atlas database</p>
+<ul>
+<li>
+<p>Follow <a href="../../mongodb/atlas/#backup-your-database">these instructions</a>.</p>
+</li>
+<li>
+<p>Make sure you renamed your exported database folder to <code>test</code> as this is the default database name in Railway.</p>
+</li>
+</ul>
+<p>b) Copy your Railway database connection string</p>
+<ol>
+<li>Select your MongoDB database</li>
+<li>Click on <code>Connect</code></li>
+<li>Click on the Copy icon</li>
+</ol>
+<p><img src="../../mongodb/img/AtlasX05.png" style="zoom:80%;" /></p>
+<p>c) Import your Atlas database in Railway</p>
+<ul>
+<li>Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path). For example in Windows 64bits it's in <code>C:\Program Files\MongoDB\Tools\100\bin</code>.</li>
+</ul>
+<p>Type a new command starting with: <code>mongorestore --uri</code> followed by the database string you copied above in <strong>b)3.</strong>, run it.</p>
+<p><img src="../../mongodb/img/AtlasX06.png" style="zoom:80%;" /></p>
+<p>d) Wait until the import completes. You will see a line like this before returning to the command prompt.</p>
+<pre><code>2022-09-11T09:49:35.331+0200    456003 document(s) restored successfully. 0 document(s) failed to restore.
+</code></pre>
+
+<p>The number of documents will be different but the rest should be identical.</p>
+<p>You have completed database restore.</p>
+<p></br></p>
+<p>If you're migrating your database, make sure to <a href="#editing-variables-in-railway">update</a> the <code>MONGODB_URI</code> variable string to the new URI as copied in <strong>b)3.</strong>.<br />
+Refresh your Nightscout browser once deployment completes view to verify data has been imported correctly.</p>
+<p></br></p>
 <h2 id="editing-variables-in-railway">Editing Variables in Railway<a class="headerlink" href="#editing-variables-in-railway" title="Permanent link">⌁</a></h2>
 <p></br></p>
+<h4 id="method-1-web-interface">Method 1 - Web interface<a class="headerlink" href="#method-1-web-interface" title="Permanent link">⌁</a></h4>
+<p>This is recommended when you only need to edit or add few variables.</p>
 <p>a) Open <a href="https://railway.app">Railway</a> and click <code>login</code>. Login with GitHub.</p>
 <p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
 <p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
@@ -1624,6 +1788,35 @@ Click on the link to open it.</p>
 <li>Edit or delete the variable or its value with the line end menu</li>
 </ol>
 <p><img src="../img/RailwayM18.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Note that each variable modification will redeploy your project.</p>
+<p></br></p>
+<h4 id="method-2-raw-editor">Method 2 - Raw Editor<a class="headerlink" href="#method-2-raw-editor" title="Permanent link">⌁</a></h4>
+<p>This is recommended when you must perform lots of changes to avoid multiple project redeploys.</p>
+<p>a) Open <a href="https://railway.app">Railway</a> and click <code>login</code>. Login with GitHub.</p>
+<p><img src="../img/Railway00.png" style="zoom:80%;" /></p>
+<p><img src="../img/Railway01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>b) Select your Nightscout project.</p>
+<p><img src="../img/RailwayM15.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>c) Select your web app.</p>
+<p><img src="../img/RailwayM16.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>d) Click on <code>Variables</code>.</p>
+<p><img src="../img/RailwayM17.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>e) Click on <code>RAW Editor</code> top right</p>
+<p><img src="../img/Railway39.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>f) You can access all your variables in a text editor, each line contains the variable name, the sign <code>=</code> then its corresponding value.</p>
+<p><code>VARIABLE=value</code></p>
+<p>Perform all your changes taking care of uppercase and lowercase information and click <code>Update Variables</code> when finished.</p>
+<p><img src="../img/Railway40.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Once saved your project will redeploy.<br />
+If deploy fails, check your modifications...</p>
+<p></br></p>
                 
               
               

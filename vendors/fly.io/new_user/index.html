@@ -511,8 +511,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editing-config-vars-in-flyio" class="md-nav__link">
-    Editing Config Vars in Fly.io
+  <a href="#editing-secrets-in-flyio" class="md-nav__link">
+    Editing Secrets in Fly.io
   </a>
   
 </li>
@@ -1208,8 +1208,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editing-config-vars-in-flyio" class="md-nav__link">
-    Editing Config Vars in Fly.io
+  <a href="#editing-secrets-in-flyio" class="md-nav__link">
+    Editing Secrets in Fly.io
   </a>
   
 </li>
@@ -1242,11 +1242,11 @@ Consider <a href="/#nightscout-as-a-service">Nightscout as a service</a> as an o
 <p class="admonition-title"><strong>Not documented yet.</strong></p>
 </div>
 <p></br></p>
-<h2 id="editing-config-vars-in-flyio">Editing Config Vars in Fly.io<a class="headerlink" href="#editing-config-vars-in-flyio" title="Permanent link">⌁</a></h2>
+<h2 id="editing-secrets-in-flyio">Editing Secrets in Fly.io<a class="headerlink" href="#editing-secrets-in-flyio" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <div class="admonition warning">
 <p class="admonition-title">Secrets</p>
-<p>You <strong>cannot see the values of your variables as they are secret</strong>.<br />
+<p>You <strong>cannot see the values of your secret variables as they are secret</strong>.<br />
 You can only delete them and set them: you <strong>cannot edit them</strong>.<br />
 Please make sure you write them down somewhere!</p>
 </div>
@@ -1261,14 +1261,16 @@ If required, authenticate through GitHub.</p>
 <p>Fly.io variables are named <code>Secrets</code> and you cannot visualize them.<br />
 Look <a href="https://fly.io/docs/getting-started/working-with-fly-apps/#working-with-secrets">here</a> for more details.</p>
 <p></br></p>
-<p>If you want to create a new variable or modify an existing one you need to use the <code>flyctl secrets set</code> command.<br />
-For example if you want to set your Nightscout site vertical scale to linear:</p>
-<pre><code>flyctl secrets set SCALE_Y=&quot;linear&quot; -a yourappname
+<p>If you want to create a new secret or modify an existing one you need to use the <code>flyctl secrets set</code> command.<br />
+For example if you want to set your Nightscout site API Secret to <strong>Th1515MyP455w0rd</strong>, type:</p>
+<pre><code>flyctl secrets set API_SECRET=&quot;Th1515MyP455w0rd&quot; -a yourappname
 </code></pre>
 
-<p>If your <code>SCALE_Y</code> variable was already set to <code>linear</code> you will see the following message:<br />
+<p><em>Note: replace <code>yourappname</code> in the example with the real name of your Fly.io Nightscout app.</em></p>
+<p>If your <code>API_SECRET</code> secret was already set to <code>Th1515MyP455w0rd</code> you will see the following message:<br />
 <code>Error No change detected to secrets. Skipping release.</code></p>
-<p>When changing a variable, the app will automatically redeploy. You will see this sequence (it will take a few minutes):</p>
+<p>Now put back your original API Secret password with the same command.</p>
+<p>When changing a secret, the app will automatically redeploy. You will see this sequence (it will take a few minutes):</p>
 <pre><code>Release v1 created
 ==&gt; Monitoring deployment
 
